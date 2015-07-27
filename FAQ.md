@@ -33,6 +33,15 @@
 - See the [Themes wiki page](https://github.com/jekyll/jekyll/wiki/Themes) at the Jekyll repo site or
 - Search Goolge for [jekyll themes](http://google.com/?q=jekyll+themes) 
 
+**Q**: Can I use Bootstrap with Jekyll?
+
+**A**: Yes, of course. You can use any HTML starter template/boilerplate with Jekyll.
+
+Jekyll (and GitHub Pages) has built-in support for SCSS, thus, if you use the Bootstrap SCSS version - Jekyll
+will auto-build the `bootstrap.css` from the sources letting you easily change colors,  fonts and much more
+in `_settings.scss`.
+To get started see the `jekyll-bootstrap-theme` (github: [drjekyllthemes/jekyll-bootstrap-theme](https://github.com/drjekyllthemes/jekyll-bootstrap-theme)) ready-to-fork starter theme as a (live) example.
+
 
 ## Getting Help 
 
@@ -98,7 +107,7 @@ In Aug/2015 the list includes:
 
 ## History / Trivia
 
-**Q**: Why is the Jekyll static site generator called Jekyll (and not Hyde or <your name here>)?
+**Q**: Why is the Jekyll static site generator called Jekyll (and not Hyde or [your name here])?
 
 **A**: Tom Preston-Werner started to put together some Ruby scripts that let you
 "[Blog Like a Hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html)" back in 2008
@@ -106,7 +115,7 @@ and published the package as Jekyll with
 the tagline "Transform your text into a monster" and a black and white theme. 
 
 The name is inspired by "[The Strange Case of Dr. Jekyll and Mr. Hyde](http://drjekyllthemes.github.io/jekyll-book-theme/)" - a novella written by 
-Scottish author Robert Louis Stevenson and first published in 1886 in London. 
+Scottish author Robert Louis Stevenson first published in 1886 in London. 
 Why? Read the novella online - generated using the Jekyll world classics book theme ;-) 
 Spoiler alert:  Dr. Jekyll and Mr. Hyde is one and only one person. 
 
