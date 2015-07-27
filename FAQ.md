@@ -43,6 +43,7 @@ in `_settings.scss`.
 To get started see the `jekyll-bootstrap-theme` (github: [drjekyllthemes/jekyll-bootstrap-theme](https://github.com/drjekyllthemes/jekyll-bootstrap-theme)) ready-to-fork starter theme as a (live) example.
 
 
+
 ## Getting Help 
 
 
@@ -102,6 +103,40 @@ In Aug/2015 the list includes:
 - `jekyll-sitemap`
 - `jekyll-feed`
 - `jemoji`  (github: [jekyll/jemoji](https://github.com/jekyll/jemoji)) - GitHub-flavored emoji plugin for Jekyll
+
+
+## Liquid Templates
+
+**Q**: How can I post (escape) code snippets that include curly brackets `{{ }}`?
+
+**A**: Wrap your code snippets with `{% raw %}` tags. Example:
+
+Before:
+
+~~~
+{% assign words = content | number_of_words %}
+{% if words < 360 %}
+   1 min
+{% else %}
+   {{ words | divided_by:180 }} mins
+{% endif %}
+~~~
+
+After:  
+
+~~~
+{% raw %}
+{% assign words = content | number_of_words %}
+{% if words < 360 %}
+    1 min
+{% else %}
+   {{ words | divided_by:180 }} mins
+{% endif %}
+{% endraw %}
+~~~
+
+Note: Unless escaped (with raw) `{{ }}` and `{% %}` get processed by Jekyll 
+as Liquid template tags/directives/macros.
 
 
 
