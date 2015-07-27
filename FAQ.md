@@ -29,9 +29,9 @@
 
 **A**:
 
-- Check the [Dr. Jekyll's Themes Directory](https://drjekyllthemes.github.io/) or
-- See the [Themes Wiki Page](https://github.com/jekyll/jekyll/wiki/Themes) at the Jekyll repo site or
-- Search Goolge for [Jekyll Themes](http://google.com/?q=jekyll+themes) 
+- Check the [Dr. Jekyll's Themes](https://drjekyllthemes.github.io/) directory or
+- See the [Themes wiki page](https://github.com/jekyll/jekyll/wiki/Themes) at the Jekyll repo site or
+- Search Goolge for [jekyll themes](http://google.com/?q=jekyll+themes) 
 
 
 ## Getting Help 
@@ -70,7 +70,7 @@ without getting converted to HTML? Why?
 ~~~
 ---
 layout: page
-title:  'The Front Matters'
+title:  "The Front Matters"
 ---
 ~~~
 
@@ -82,7 +82,7 @@ Note: The front matter MUST start and end with three dashes e.g. `---` (not two 
 
 **Q**: What Jekyll plugins can I use on GitHub Pages?
 
-**A**: See the [GitHub Pages Dependencies Version Page](https://pages.github.com/versions/) 
+**A**: See the [GitHub Pages Dependency Versions](https://pages.github.com/versions/) page 
 listing all installed (white-listed) Jekyll Plugins.
 In Aug/2015 the list includes:
 
