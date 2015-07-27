@@ -40,7 +40,7 @@
 Jekyll (and GitHub Pages) has built-in support for SCSS, thus, if you use the Bootstrap SCSS version - Jekyll
 will auto-build the `bootstrap.css` from the sources letting you change colors,  fonts and much more
 in `_settings.scss`.
-To get started see the `jekyll-bootstrap-theme` (github: [drjekyllthemes/jekyll-bootstrap-theme](https://github.com/drjekyllthemes/jekyll-bootstrap-theme)) ready-to-fork starter theme as a (live) example.
+To get started see the `jekyll-bootstrap-theme` (github: [drjekyllthemes/jekyll-bootstrap-theme](https://github.com/drjekyllthemes/jekyll-bootstrap-theme)) - a ready-to-fork starter theme - as a (live) example.
 
 
 
@@ -52,7 +52,7 @@ To get started see the `jekyll-bootstrap-theme` (github: [drjekyllthemes/jekyll-
 **A**:
 
 - Use the official Jekyll talk forum (web: [talk.jekyllrb.org](https://talk.jekyllrb.com/)) 
-  to post your questions and help on troubleshooting.
+  to post your questions and find help on troubleshooting.
 - Ask your (Jekyll) friends!
 
 
