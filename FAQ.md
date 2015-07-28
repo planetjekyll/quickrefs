@@ -14,24 +14,26 @@
 
 **Q**: Where can I find the latest (and greatest) Jekyll news and goodies?
 
-**A**: 
+**A**:  Check the official Jekyll news blog (web: [jekyllrb.com/news](http://jekyllrb.com/news)) 
+or the Twitter page (t: [jekyllrb](https://twitter.com/jekyllrb)).
 
-- Check the official Jekyll news blog (web: [jekyllrb.com/news](http://jekyllrb.com/news)) 
-  or the Twitter page (t: [jekyllrb](https://twitter.com/jekyllrb)).
-- For detailed upcoming major and minor enhancements and bug fixes, see the [History page](https://github.com/jekyll/jekyll/blob/master/History.markdown) in the Jekyll repo.
-- For more Jekyll news see the Vienna.html news page (t: [viennahtml](https://twitter.com/viennahtml)).
-- For more Jekyll goodies see the [Jekyll bookmark category](http://www.thenewdynamic.org/tool/jekyll/) at the (Static is) The New Dynamic site.
+For detailed upcoming major and minor enhancements and bug fixes, see the [History page](https://github.com/jekyll/jekyll/blob/master/History.markdown) in the Jekyll repo.
+
+For more Jekyll news see the Vienna.html news page (t: [viennahtml](https://twitter.com/viennahtml)).
+
+For more Jekyll goodies see the [Jekyll bookmark category](http://www.thenewdynamic.org/tool/jekyll/) at the (Static is) The New Dynamic site.
 
 
 ## Themes / Templates
 
 **Q**: Where can I find themes?
 
-**A**:
+**A**: Check the [Dr. Jekyll's Themes](https://drjekyllthemes.github.io/) directory or
 
-- Check the [Dr. Jekyll's Themes](https://drjekyllthemes.github.io/) directory or
-- See the [Themes wiki page](https://github.com/jekyll/jekyll/wiki/Themes) at the Jekyll repo site or
-- Search Goolge for [jekyll themes](http://google.com/?q=jekyll+themes) 
+See the [Themes wiki page](https://github.com/jekyll/jekyll/wiki/Themes) at the Jekyll repo site or
+
+Search Goolge for [jekyll themes](http://google.com/?q=jekyll+themes) 
+
 
 **Q**: Can I use Bootstrap with Jekyll?
 
