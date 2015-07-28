@@ -10,5 +10,4 @@
 
 **F.A.Q.s**
 
-- [Jekyll FAQs - Frequently Asked Questions (and Answers)](FAQ:md)
-
+- [Jekyll FAQs - Frequently Asked Questions (and Answers)](FAQ.md)
