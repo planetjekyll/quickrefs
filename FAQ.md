@@ -70,7 +70,7 @@ In Europe groups include:
 
 In America groups include:
 
-- @ San Francisco, California -  **San Franciso Static Web Tech - SF SWT** (meetup: [sf-static-web-tech](http://meetup.com/sf-static-web-tech/))
+- @ San Francisco, California -  **San Franciso Static Web Tech - SF SWT** (web: [staticwebtech.com](http://www.staticwebtech.com), meetup: [sf-static-web-tech](http://meetup.com/sf-static-web-tech/), t: [staticwebtech](https://twitter.com/staticwebtech))
 - @ New York, New York - **The New Dynamic** (meetup: [The-New-Dynamic](http://meetup.com/The-New-Dynamic/))
 - @ Austin, Texas - **Peanut Butter and Jekyll** (meetup: [PB-and-Jekyll](http://meetup.com/PB-and-Jekyll/))
 - @ Denver, Colorado - **Denver Jekyll** (meetup: [denver-jekyll](http://meetup.com/denver-jekyll/))
