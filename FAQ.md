@@ -12,7 +12,7 @@
 
 ## What's News?
 
-**Q**: Where can I find the latest (and greatest) Jekyll news and goodies?
+#### Q: Where can I find the latest (and greatest) Jekyll news and goodies?
 
 **A**:  Check the official Jekyll news blog (web: [jekyllrb.com/news](http://jekyllrb.com/news)) 
 or the Twitter page (t: [jekyllrb](https://twitter.com/jekyllrb)).
@@ -26,7 +26,7 @@ For more Jekyll goodies see the [Jekyll bookmark category](http://www.thenewdyna
 
 ## Themes / Templates
 
-**Q**: Where can I find themes?
+#### Q: Where can I find themes?
 
 **A**: Check the [Dr. Jekyll's Themes](https://drjekyllthemes.github.io/) directory or
 
