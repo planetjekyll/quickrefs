@@ -1,3 +1,9 @@
+Quickref Series @ Planet Jekyll
+
+[Jekyll](https://github.com/planetjekyll/quickrefs/blob/master/JEKYLL.md) • 
+[Octopress](https://github.com/planetjekyll/quickrefs/blob/master/OCTOPRESS.md)
+
+
 # Jekyll Quick Reference (Cheat Sheet)
 
 ## Table of Contents
@@ -887,7 +893,7 @@ $ git remote show origin
 
 **License** 
 
-The Jekyll Quickreference (Cheat Sheet) is dedicated to the public domain. 
+The Jekyll Quick Reference (Cheat Sheet) is dedicated to the public domain. 
 Use it as you please with no restrictions whatsoever.
 
 **Questions? Comments?**
