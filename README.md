@@ -1,5 +1,5 @@
 
-# Jekyll Quick References (Cheat Sheets)
+# Jekyll Quick References (Cheat Sheets) 'n' F.A.Q.s
 
 **Quickref Series**
 
