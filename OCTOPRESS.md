@@ -1,7 +1,10 @@
 Quickref Series @ Planet Jekyll
 
 [Jekyll](https://github.com/planetjekyll/quickrefs/blob/master/JEKYLL.md) • 
-[Octopress](https://github.com/planetjekyll/quickrefs/blob/master/OCTOPRESS.md)
+[Octopress](https://github.com/planetjekyll/quickrefs/blob/master/OCTOPRESS.md)  • 
+[GitHub Pages](https://github.com/planetjekyll/quickrefs/blob/master/GITHUB.md) • 
+[WordPress](https://github.com/planetjekyll/quickrefs/blob/master/WORDPRESS.md)
+
 
 
 # Octopress Quick Reference (Cheat Sheet)
