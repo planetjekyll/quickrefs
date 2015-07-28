@@ -62,8 +62,18 @@ for a start.
 
 #### Q: Where can I find Jekyll friends?
 
-Look for a Jekyll (static site) user group in your city. The first one in Europe 
-started in Vienna called [Vienna.html](https://twitter.com/viennahtml).
+Look for a Jekyll (static site) user group in your city.
+
+In Europe groups include:
+
+- @ Vienna, Austria - **Vienna.html** (t: [viennahtml](https://twitter.com/viennahtml))
+
+In America groups include:
+
+- @ San Francisco, California -  **San Franciso Static Web Tech - SF SWT** (meetup: [sf-static-web-tech](http://meetup.com/sf-static-web-tech/))
+- @ New York, New York - **The New Dynamic** (meetup: [The-New-Dynamic](http://meetup.com/The-New-Dynamic/))
+- @ Austin, Texas - **Peanut Butter and Jekyll** (meetup: [PB-and-Jekyll](http://meetup.com/PB-and-Jekyll/))
+- @ Denver, Colorado - **Denver Jekyll** (meetup: [denver-jekyll](http://meetup.com/denver-jekyll/))
 
 If there's no Jekyll group yet in your city, why not start one! 
 If not, try a local Ruby user group (be aware you might run into some Middleman fanatics ;-),
