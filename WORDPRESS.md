@@ -1,5 +1,12 @@
-# WordPress <=> Jekyll - Template (Theming) Cheat Sheet
+Quickref Series @ Planet Jekyll
 
+[Jekyll](https://github.com/planetjekyll/quickrefs/blob/master/JEKYLL.md) • 
+[Octopress](https://github.com/planetjekyll/quickrefs/blob/master/OCTOPRESS.md)  • 
+[GitHub Pages](https://github.com/planetjekyll/quickrefs/blob/master/GITHUB.md) • 
+[WordPress](https://github.com/planetjekyll/quickrefs/blob/master/WORDPRESS.md)
+
+
+# WordPress <=> Jekyll - Template (Theming) Cheat Sheet
 
 
 `bloginfo()`
