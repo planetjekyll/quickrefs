@@ -1,4 +1,4 @@
-# Jekyll FAQs - Frequently Asked Questions (and Answers)
+# Jekyll F.A.Q.s - Frequently Asked Questions (and Answers)
 
 [What's News?](#whats-news) • 
 [Themes / Templates](#themes--templates) • 
