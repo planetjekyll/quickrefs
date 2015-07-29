@@ -6,7 +6,7 @@
 - [Jekyll Quick Reference (Cheat Sheet)](JEKYLL.md)
 - [Octopress Quick Reference (Cheat Sheet)](OCTOPRESS.md)
 - [GitHub Pages Quick Reference (Cheat Sheet)](GITHUB.md)
-- [YAML Quick Reference (Cheat Sheet) for Jekyll Datafiles](YAML.md)
+- [YAML (for Jekyll Datafiles) Quick Reference (Cheat Sheet)](YAML.md)
 - [WordPress <=> Jekyll Theming (Template) Reference (Cheat Sheet)](WORDPRESS.md)
 
 **F.A.Q.s**
