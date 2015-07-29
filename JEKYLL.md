@@ -3,6 +3,7 @@ Quickref Series @ Planet Jekyll
 [Jekyll](https://github.com/planetjekyll/quickrefs/blob/master/JEKYLL.md) • 
 [Octopress](https://github.com/planetjekyll/quickrefs/blob/master/OCTOPRESS.md)  • 
 [GitHub Pages](https://github.com/planetjekyll/quickrefs/blob/master/GITHUB.md) • 
+[YAML (for Datafiles)](https://github.com/planetjekyll/quickrefs/blob/master/YAML.md) •
 [WordPress](https://github.com/planetjekyll/quickrefs/blob/master/WORDPRESS.md)
 
 

@@ -1,19 +1,8 @@
-
-<!--
-  todo:
-    add some notes about quotes
-     e.g. ' in unquotes strings
-     how to use " - possible? e.g. use 'Jack "Notron" Atom'
-  add more notes about boolean
-   check for values ??  - are boolean or string?
-  -->
-
-
 Quickref Series @ Planet Jekyll
 
-[Jekyll](https://github.com/planetjekyll/quickrefs/blob/master/JEKYLL.md) • 
-[Octopress](https://github.com/planetjekyll/quickrefs/blob/master/OCTOPRESS.md)  • 
-[GitHub Pages](https://github.com/planetjekyll/quickrefs/blob/master/GITHUB.md) • 
+[Jekyll](https://github.com/planetjekyll/quickrefs/blob/master/JEKYLL.md) •
+[Octopress](https://github.com/planetjekyll/quickrefs/blob/master/OCTOPRESS.md)  •
+[GitHub Pages](https://github.com/planetjekyll/quickrefs/blob/master/GITHUB.md) •
 [YAML (for Datafiles)](https://github.com/planetjekyll/quickrefs/blob/master/YAML.md) •
 [WordPress](https://github.com/planetjekyll/quickrefs/blob/master/WORDPRESS.md)
 
@@ -30,11 +19,12 @@ _YAML Ain't Markup Language - a human friendly data serialization standard for a
     - [Nested List of Key/Value Records e.g. nav.yml](#nested-list-of-keyvalue-records)
     - [Hash (Dictionary) of Key/Value Records e.g. people.yml](#hash-dictionary-of-keyvalue-records)
 - Front Matter Examples
+    - [Front Matter w/ List of Key/Value Records e.g. gallery.html](#)
 - More
     - [Multi-Line Strings](#multi-line-strings)
     - [Inline Style a.k.a. JSON-Style](#)
     - [Literal Keys](#literal-keys)
-    - [More Gotschas](#more-gotschas)
+    - [More Gotchas](#more-gotchas)
         - No Tabs (\t) for Indentation - Use Spaces, Period
         - Predefined Boolean and No Value Constants - True/False, Yes/No, On/Off, ~/Null
     - [Tools](#tools)
@@ -47,7 +37,7 @@ _YAML Ain't Markup Language - a human friendly data serialization standard for a
 #### Let's you use comments or blank lines or spaces
 
 
-Example: `themes.yml`
+Example - `themes.yml`:
 
 ``` yaml
 #########################################
@@ -62,12 +52,12 @@ Example: `themes.yml`
 
 # Another (Possible) Formatting Style
 
-- title    : Classics Book     # Todo: Rename to World Classics - Why? Why Not?
-  github   : drjekyllthemes/jekyll-book-theme
-  branch   : gh-pages
-  author   : Dr. Henry Jekyll et al
-  thumbnail: drjekyll-book.png
-  license  : Public Domain  
+- title     : Classics Book     # Todo: Rename to World Classics - Why? Why Not?
+  github    : drjekyllthemes/jekyll-book-theme
+  branch    : gh-pages
+  author    : Dr. Henry Jekyll et al
+  thumbnail : drjekyll-book.png
+  license   : Public Domain  
 ```
 
 is the same as:
@@ -86,6 +76,15 @@ is the same as:
   thumbnail: drjekyll-book.png
   license: Public Domain
 ```
+
+Note: The colon (`:`) key/value separator MUST (only) be followed by a space, thus,
+you can use `author  :  Dr. Henry Jekyll et al` and so on. 
+
+Note: For inline end-of-line comments - the number sign / hash (`#`) MUST
+have both a leading and trailing space e.g. `some text here  # comment starts here`,
+otherwise the number sign / hash is just part of the string
+e.g. `Jekyll - The #1 Static Site Generator` works as expected.
+
 
 
 #### Let's you use strings or keys without (requiring) quotes
@@ -122,22 +121,6 @@ or single quotes(`''`) e.g. 'Using JRuby: Bringing Ruby to Java'.
 
 
 
-<!--
-commans work: e.g.
-
-author: Charles O Nutter, Thomas Enebo, Nick Sieger, Ola Bini, Ian Dees
-
-todo: Double check.
-
-If you string includes a comma (`,`) you MUST quote your string. Otherwise, the comma is interpreted as a value list seperator (e.g. _key: value, value, value_). Example:
-
-``` yaml
-title: "Sinatra: Up and Running - Ruby for the Web, Simply"
-title: ""
-```
--->
-
-
 ## Datafile Examples
 
 List of Key/Value Records  •
@@ -159,7 +142,7 @@ Book List Example -`books.yml`:
   book_url:  https://pragprog.com/book/rmtpruby/text-processing-with-ruby
 
 - title:     "Learn Ruby the Hard Way"
-  subtitle:  A Simple and Idiomatic Introduction to the Imaginative World Of Computational Thinking with Code
+  subtitle:  A Simple and Idiomatic Intro to the Imaginative World Of Computational Thinking with Code
   edition:   3rd Edition
   author:    Zed Shaw
   cover:     2014/learn-ruby-the-hard-way.jpg
@@ -285,10 +268,67 @@ author: henry
 ```
 
 
+## Front Matter Examples
 
-## Multi-Line Strings
 
-### Unfolded (e.g. Keep Newlines) - `|`
+### Front Matter w/ List of Key/Value Records 
+
+Photo Gallery Example 1/2 - `gallery.html` - Front Matter:
+
+``` yaml
+---
+layout: default
+title:  Great Books
+books:
+- title:     Good Beer Guide United Kingdom
+  edition:   2015, 42nd Edition
+  author:    Roger Protz
+  cover:     uk/good-beer-guide-2015.jpg
+- title:     300 Beers to Try Before You Die!
+  author:    Roger Protz
+  cover:     300-beers-to-try.jpg
+- title:     Beer in the Netherlands
+  author:    Tim Skelton
+  cover:     nl/beer-in-the-netherlands.jpg
+---
+``` 
+
+Use like:
+
+
+Photo Gallery Example 2/2 - `gallery.html` - Continued:
+
+``` html
+<h1>{{ page.title }}
+
+<div class='gallery'>
+{% for book in page.books %}
+
+  <div class='book'>
+    <img src="{{site.url}}/i/books/{{book.cover}}">
+    {{ book.title }}
+    {% if book.edition %}
+      {{ book.edition}}
+    {% endif %}
+    by {{ book.author }}
+  </div>
+
+{% endfor %}
+</div>
+```
+
+Note: The book list is defined inside the page (in the front matter), thus,
+use `page.books` instead of ~~`site.data.books`~~ to reference (e.g. loop over) the list.
+
+
+
+
+## More
+
+
+### Multi-Line Strings
+
+#### Unfolded (e.g. Keep Newlines) - `|`
 
 ``` yaml
 text: |
@@ -311,7 +351,7 @@ So he carefully spat on the ceiling\n
 
 
 
-### Folded (e.g. Strip Newlines) - `>`
+#### Folded (e.g. Strip Newlines) - `>`
 
 ``` yaml
 text: >
@@ -333,9 +373,50 @@ Wrapped text will be folded into a single paragraph\n
 Blank lines denote paragraph breaks\n
 ```
 
+### Inline Style a.k.a. JSON-Style
+
+Note: As an alternative syntax you can use inline style for lists (e.g. JSON arrays)
+and hashes/dictionaries (e.g. JSON objects). Example:
+
+``` yaml
+[{ "title":     "Bootstrap",
+   "github":    "drjekyllthemes/jekyll-bootstrap-theme",
+   "author":    "Dr. Henry Jekyll et al",
+   "thumbnail": "drjekyll-bootstrap.png" },
+ { "title":     "Classics Book",
+   "github":    "drjekyllthemes/jekyll-book-theme",
+   "author":    "Dr. Henry Jekyll et al",
+   "thumbnail": "drjekyll-book.png" }]
+```
+
+is the same as:
+
+``` yaml
+[
+ { "title": Bootstrap", "github": "drjekyllthemes/jekyll-bootstrap-theme", "author": "Dr. Henry Jekyll et al", "thumbnail": "drjekyll-bootstrap.png" },
+ { "title": "Classics Book", "github": "drjekyllthemes/jekyll-book-theme", "author": "Dr. Henry Jekyll et al", "thumbnail": "drjekyll-book.png" }
+]
+```
+
+or the same as:
+
+``` yaml
+- title     : Bootstrap
+  github    : drjekyllthemes/jekyll-bootstrap-theme
+  author    : Dr. Henry Jekyll et al
+  thumbnail : drjekyll-bootstrap.png
+- title     : Classics Book
+  github    : drjekyllthemes/jekyll-book-theme
+  author    : Dr. Henry Jekyll et al
+  thumbnail : drjekyll-book.png
+```
+
+Yes, the JavaScript Object Notation (JSON) is a just another (welcome and working)
+formatting style for datafiles. 
 
 
-## Literal Keys
+
+### Literal Keys
 
 Note: You can use upper case letters in your keys (e.g. `Teams`),
 add spaces (e.g. `Bundesliga Teams`) and
@@ -352,7 +433,7 @@ even start with numbers (e.g. `18 Teams`). Example:
 
 ## More Gotchas
 
-**No Tabs (\t) for Indentation**
+**No Tabs (\t) for Indentation - Use Spaces, Period**
 
 Note: Always use spaces for indentation, period. 
 Make sure no tabs (`\t`) have somehow ended up in your datafile leading to
@@ -360,7 +441,7 @@ unexpected results.
 
 
 
-**Predefined Constants - True/False, Yes/No, On/Off, ~/Null**
+**Predefined Boolean 'n' No Value Constants - True/False, Yes/No, On/Off, ~/Null**
 
 Note: The boolean `true` and `false` constants e.g.:
 
@@ -401,6 +482,7 @@ will become => `null` (no value). Note: A key without a value will end-up with a
 key1:           # note: value will become => null (no value); same as key1: null  or key1: ~
 key2: ""        # note: value will become => "" (string)
 ```
+
 
 
 ## Tools

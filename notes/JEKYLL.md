@@ -1,10 +1,4 @@
-# Jekyll Notes Draft (Work-in-Progress)
-
-## Commands
-
-### Octopress 
-
-to be done
+# Jekyll Notes
 
 
 ## `_config.yml`  - Configuration
@@ -37,3 +31,4 @@ These exclusions are relative to the site's source directory and cannot be outsi
 ~~~
 exclude: [DIR, FILE, ...]
 ~~~
+
