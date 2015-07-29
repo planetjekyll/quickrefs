@@ -1,4 +1,14 @@
 
+<!--
+  todo:
+    add some notes about quotes
+     e.g. ' in unquotes strings
+     how to use " - possible? e.g. use 'Jack "Notron" Atom'
+  add more notes about boolean
+   check for values ??  - are boolean or string?
+  -->
+
+
 Quickref Series @ Planet Jekyll
 
 [Jekyll](https://github.com/planetjekyll/quickrefs/blob/master/JEKYLL.md) • 
@@ -26,7 +36,7 @@ _YAML Ain't Markup Language - a human friendly data serialization standard for a
 
 ## What's human friendly?
 
-#### Let's you use comments or blank lines
+#### Let's you use comments or blank lines or spaces
 
 
 Example: `themes.yml`
@@ -42,12 +52,14 @@ Example: `themes.yml`
   thumbnail: drjekyll-bootstrap.png
   license:   Public Domain
 
-- title:     Classics Book    ## Todo: Rename to World Classics - Why? Why Not?
-  github:    drjekyllthemes/jekyll-book-theme
-  branch:    gh-pages
-  author:    Dr. Henry Jekyll et al
+# Another (Possible) Formatting Style
+
+- title    : Classics Book     # Todo: Rename to World Classics - Why? Why Not?
+  github   : drjekyllthemes/jekyll-book-theme
+  branch   : gh-pages
+  author   : Dr. Henry Jekyll et al
   thumbnail: drjekyll-book.png
-  license:   Public Domain  
+  license  : Public Domain  
 ```
 
 is the same as:
@@ -89,13 +101,28 @@ is the same as:
 
 When to use quotes for your strings?
 
-If you string includes a colon (`:`) you MUST quote your string. Example:
+If you string includes a colon (`:`) you MUST quote your string. Otherwise, the colon is interpreted as a key/value separator (e.g. _key: value_). Example:
 
 ``` yaml
 title: "Text Processing with Ruby: Extract Value from the Data That Surrounds You"
 title: "Sinatra: Up and Running - Ruby for the Web, Simply"
+title: "Using JRuby: Bringing Ruby to Java"
 ```
 
+<!--
+commans work: e.g.
+
+author: Charles O Nutter, Thomas Enebo, Nick Sieger, Ola Bini, Ian Dees
+
+todo: Double check.
+
+If you string includes a comma (`,`) you MUST quote your string. Otherwise, the comma is interpreted as a value list seperator (e.g. _key: value, value, value_). Example:
+
+``` yaml
+title: "Sinatra: Up and Running - Ruby for the Web, Simply"
+title: ""
+```
+-->
 
 
 ## List of Key/Value Records
@@ -119,7 +146,7 @@ Book List Example (e.g. `books.yml`):
   publisher: Addison-Wesley Professional (Zed Shaw's Hard Way Series)
   date:      Dec 2014
   pages:     336 pages
-  book_url:  http://www.informit.com/store/learn-ruby-the-hard-way-a-simple-and-idiomatic-introduction-9780321884992
+  book_url:  http://www.informit.com/store/learn-ruby-the-hard-way
 
 - title:     "Sinatra: Up and Running - Ruby for the Web, Simply"
   author:    Alan Harris, Konstantin Haase
