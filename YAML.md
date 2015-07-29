@@ -125,9 +125,10 @@ or single quotes(`''`) e.g. 'Using JRuby: Bringing Ruby to Java'.
 
 ## Data File Examples
 
-List of Key/Value Records  •
-Nested List of Key/Value Records •
-Hash (Dictionary) of Key/Value Records
+Ex 1) List of Key/Value Records  •
+Ex 2) Nested List of Key/Value Records •
+Ex 3) Hash (Dictionary) of Key/Value Records •
+Ex 4) Multi-File List of Key/Value Records
 
 
 ### List of Key/Value Records
@@ -274,7 +275,7 @@ author: henry
 
 Note: You can place data files in (sub)folders
 of the `_data` folder.
-Each folder level will get added to a variable's namespace.
+Each folder level will get added to the variable's namespace e.g. `site.data.orgs`.
 
 
 Org Example #1 - `orgs/jekyll.yml`:
@@ -318,6 +319,9 @@ Use like:
 
 
 ## Front Matter Examples
+
+Ex 1) Front Matter w/ List of Key/Value Records  •
+Ex 2) Multi-File List of Key/Value Records w/ Collections
 
 
 ### Front Matter w/ List of Key/Value Records 
