@@ -125,10 +125,10 @@ or single quotes(`''`) e.g. 'Using JRuby: Bringing Ruby to Java'.
 
 ## Data File Examples
 
-Ex 1) List of Key/Value Records  •
-Ex 2) Nested List of Key/Value Records •
-Ex 3) Hash (Dictionary) of Key/Value Records •
-Ex 4) Multi-File List of Key/Value Records
+List of Key/Value Records  •
+Nested List of Key/Value Records •
+Hash (Dictionary) of Key/Value Records •
+Multi-File List of Key/Value Records
 
 
 ### List of Key/Value Records
@@ -320,13 +320,13 @@ Use like:
 
 ## Front Matter Examples
 
-Ex 1) Front Matter w/ List of Key/Value Records  •
-Ex 2) Multi-File List of Key/Value Records w/ Collections
+Front Matter w/ List of Key/Value Records  •
+Multi-File List of Key/Value Records w/ Collections
 
 
 ### Front Matter w/ List of Key/Value Records 
 
-Portfolio Example 1/2 (Front Matter) - `portfolio.html`:
+Portfolio Example, Part 1/2 (Front Matter) - `portfolio.html`:
 
 ``` yaml
 ---
@@ -359,7 +359,7 @@ portfolio:
 
 Use like:
 
-Portfolio Example 2/2 (Continued) - `portfolio.html`:
+Portfolio Example, Part 2/2 (Continued) - `portfolio.html`:
 
 ``` html
 <h1>{{ page.title }}
