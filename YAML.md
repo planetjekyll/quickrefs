@@ -13,7 +13,7 @@ _a human friendly data serialization standard for all programming languages_
 
 Example: `themes.yml`
 
-```yaml
+``` yaml
 #########################################
 # Dr. Jekyll's Themes - Add Your Theme!
 
@@ -34,7 +34,7 @@ Example: `themes.yml`
 
 is the same as:
 
-```yaml
+``` yaml
 - title: Bootstrap
   github: drjekyllthemes/jekyll-bootstrap-theme
   branch: gh-pages
@@ -52,7 +52,7 @@ is the same as:
 
 #### Let's you use strings or keys without (requiring) quotes
 
-```yaml
+``` yaml
 title:   Bootstrap
 github:  drjekyllthemes/jekyll-bootstrap-theme
 author:  Dr. Henry Jekyll et al
@@ -60,7 +60,7 @@ author:  Dr. Henry Jekyll et al
 
 is the same as:
 
-```yaml
+``` yaml
 "title": "Bootstrap"
 "github": "drjekyllthemes/jekyll-bootstrap-theme"
 "author": "Dr. Henry Jekyll et al"
@@ -73,7 +73,7 @@ When to use quotes for your strings?
 
 If you string includes a colon (`:`) you MUST quote your string. Example:
 
-```yaml
+``` yaml
 title: "Text Processing with Ruby: Extract Value from the Data That Surrounds You"
 title: "Sinatra: Up and Running - Ruby for the Web, Simply"
 ```
@@ -84,7 +84,7 @@ title: "Sinatra: Up and Running - Ruby for the Web, Simply"
 
 Book List Example (e.g. `books.yml`):
 
-```yaml
+``` yaml
 - title:     "Text Processing with Ruby: Extract Value from the Data That Surrounds You"
   author:    Rob Miller
   cover:     2015/text-processing-with-ruby.jpg
@@ -114,7 +114,7 @@ Book List Example (e.g. `books.yml`):
 
 Use like:
 
-```
+``` html
 {% for book in site.data.books %}
   <div>
   <a href="{{ book.book_url }}">
@@ -138,7 +138,7 @@ Use like:
 
 Navigation Menu Example: e.g. `nav.yml`
 
-```yaml
+``` yaml
 - title: Home
   href:  /
 
@@ -166,7 +166,7 @@ Navigation Menu Example: e.g. `nav.yml`
 
 Use like:
 
-```
+``` html
 <nav>
   <ul>
     {% for nav in site.data.nav %}
@@ -194,7 +194,7 @@ Use like:
 
 Author List Example: e.g. `people.yml`
 
-```yaml
+``` yaml
 henry:
   name:    Dr. Henry Jekyll
   twitter: henryjekyll
@@ -209,7 +209,7 @@ Use like:
 
 Example 1) Lookup author info in a post
 
-```
+``` html
 ---
 title:  sample post
 author: henry
@@ -227,7 +227,7 @@ author: henry
 
 ### Unfolded (e.g. Keep Newlines) - `|`
 
-```yaml
+``` yaml
 text: |
    There once was a short man from Ealing
    Who got on a bus to Darjeeling
@@ -250,7 +250,7 @@ So he carefully spat on the ceiling\n
 
 ### Folded (e.g. Strip Newlines) - `>`
 
-```yaml
+``` yaml
 text: >
    Wrapped text
    will be folded
@@ -278,7 +278,7 @@ Note: You can use upper case letters in your keys (e.g. `Teams`),
 add spaces (e.g. `Bundesliga Teams`) and
 even start with numbers (e.g. `18 Teams`). Example:
 
-```yaml
+``` yaml
 18 Teams:
   - Austria Wien
   - SC Salzburg
@@ -292,7 +292,7 @@ even start with numbers (e.g. `18 Teams`). Example:
 
 Boolean true constants:
 
-```yaml
+``` yaml
 true
 Y
 Yes
@@ -303,7 +303,7 @@ Will become => boolean `true`
 
 Boolean false constants:
 
-```yaml
+``` yaml
 FALSE
 n
 No
@@ -316,7 +316,7 @@ Will become => boolean `false`
 
 Null constants:
 
-```yaml
+``` yaml
 ~
 null
 ```
