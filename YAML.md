@@ -3,23 +3,23 @@ Quickref Series @ Planet Jekyll
 [Jekyll](https://github.com/planetjekyll/quickrefs/blob/master/JEKYLL.md) •
 [Octopress](https://github.com/planetjekyll/quickrefs/blob/master/OCTOPRESS.md)  •
 [GitHub Pages](https://github.com/planetjekyll/quickrefs/blob/master/GITHUB.md) •
-[YAML (for Datafiles)](https://github.com/planetjekyll/quickrefs/blob/master/YAML.md) •
+[YAML (for Data Files)](https://github.com/planetjekyll/quickrefs/blob/master/YAML.md) •
 [WordPress](https://github.com/planetjekyll/quickrefs/blob/master/WORDPRESS.md)
 
 
-# YAML Quick Reference (Cheat Sheet) for Jekyll Datafiles
+# YAML Quick Reference (Cheat Sheet) for Jekyll Data Files, Front Matter and Collections 
 
 _YAML Ain't Markup Language - a human friendly data serialization standard for all programming languages_
 
 
 ## Table of Contents
 
-- Datafile Examples
+- Data File Examples
     - [List of Key/Value Records e.g. books.yml](#list-of-keyvalue-records)
     - [Nested List of Key/Value Records e.g. nav.yml](#nested-list-of-keyvalue-records)
     - [Hash (Dictionary) of Key/Value Records e.g. people.yml](#hash-dictionary-of-keyvalue-records)
 - Front Matter Examples
-    - [Front Matter w/ List of Key/Value Records e.g. gallery.html](#)
+    - [Front Matter w/ List of Key/Value Records e.g. portfolio.html](#)
 - More
     - [Multi-Line Strings](#multi-line-strings)
     - [Inline Style a.k.a. JSON-Style](#)
@@ -80,7 +80,7 @@ is the same as:
 Note: The colon (`:`) key/value separator MUST (only) be followed by a space, thus,
 you can use `author  :  Dr. Henry Jekyll et al` and so on. 
 
-Note: For inline end-of-line comments - the number sign / hash (`#`) MUST
+Note: The number sign / hash (`#`) used for inline end-of-line comments MUST
 have both a leading and trailing space e.g. `some text here  # comment starts here`,
 otherwise the number sign / hash is just part of the string
 e.g. `Jekyll - The #1 Static Site Generator` works as expected.
@@ -121,7 +121,7 @@ or single quotes(`''`) e.g. 'Using JRuby: Bringing Ruby to Java'.
 
 
 
-## Datafile Examples
+## Data File Examples
 
 List of Key/Value Records  •
 Nested List of Key/Value Records •
@@ -273,52 +273,58 @@ author: henry
 
 ### Front Matter w/ List of Key/Value Records 
 
-Photo Gallery Example 1/2 - `gallery.html` - Front Matter:
+Portfolio Example 1/2 (Front Matter) - `portfolio.html`:
 
 ``` yaml
 ---
 layout: default
-title:  Great Books
-books:
-- title:     Good Beer Guide United Kingdom
-  edition:   2015, 42nd Edition
-  author:    Roger Protz
-  cover:     uk/good-beer-guide-2015.jpg
-- title:     300 Beers to Try Before You Die!
-  author:    Roger Protz
-  cover:     300-beers-to-try.jpg
-- title:     Beer in the Netherlands
-  author:    Tim Skelton
-  cover:     nl/beer-in-the-netherlands.jpg
+title:  Histories, Tragedies and Comedies
+portfolio:
+- title:     Richard II
+  category:  History
+  cover:     richard-ii.jpg
+- title:     Henry VI, Part 1
+  category:  History
+  cover:     henry-vi-1.png
+- title:     Romeo and Juliet
+  category:  Tragedy
+  cover:     romeo-n-juliet.jpg
+- title:     Hamlet
+  category:  Tragedy
+  cover:     hamlet.gif
+- title:     Antony and Cleopatra
+  category:  Tragedy
+  cover:     antony-n-cleopatra.jpg
+- title:     All's Well That Ends Well 
+  author:    Comedy
+  cover:     alls-well-that-ends-well.jpg
+- title:     A Midsummer Night's Dream 
+  author:    Comedy
+  cover:     a-midsummer-nights-dream.jpg
 ---
 ``` 
 
 Use like:
 
-
-Photo Gallery Example 2/2 - `gallery.html` - Continued:
+Portfolio Example 2/2 (Continued) - `portfolio.html`:
 
 ``` html
 <h1>{{ page.title }}
 
-<div class='gallery'>
-{% for book in page.books %}
+<div class='porfolio'>
+{% for work in page.portfolio %}
 
-  <div class='book'>
-    <img src="{{site.url}}/i/books/{{book.cover}}">
-    {{ book.title }}
-    {% if book.edition %}
-      {{ book.edition}}
-    {% endif %}
-    by {{ book.author }}
+  <div class='work'>
+    <img src="{{site.url}}/i/portfolio/{{work.cover}}">
+    {{ work.title }} // {{ work.category }}
   </div>
 
 {% endfor %}
 </div>
 ```
 
-Note: The book list is defined inside the page (in the front matter), thus,
-use `page.books` instead of ~~`site.data.books`~~ to reference (e.g. loop over) the list.
+Note: The portfolio is defined inside the page (in the front matter), thus,
+use `page.portfolio` instead of ~~`site.data.portfolio`~~ to reference (e.g. loop over) the list.
 
 
 
