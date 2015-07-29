@@ -101,7 +101,7 @@ is the same as:
 
 When to use quotes for your strings?
 
-If you string includes a colon (`:`) you MUST quote your string. Otherwise, the colon is interpreted as a key/value separator (e.g. _key: value_). Example:
+If your string includes a colon (`:`) you MUST quote your string. Otherwise, the colon is interpreted as a key/value separator (e.g. _key: value_). Example:
 
 ``` yaml
 title: "Text Processing with Ruby: Extract Value from the Data That Surrounds You"
