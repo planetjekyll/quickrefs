@@ -18,8 +18,10 @@ _YAML Ain't Markup Language - a human friendly data serialization standard for a
     - [List of Key/Value Records e.g. books.yml](#list-of-keyvalue-records)
     - [Nested List of Key/Value Records e.g. nav.yml](#nested-list-of-keyvalue-records)
     - [Hash (Dictionary) of Key/Value Records e.g. people.yml](#hash-dictionary-of-keyvalue-records)
+    - [Multi-File List of Key/Value Records e.g. orgs/jekyll.yml,octopress.yml](#)
 - Front Matter Examples
     - [Front Matter w/ List of Key/Value Records e.g. portfolio.html](#)
+    - [Multi-File List of Key/Value Records w/ Collections e.g. _albums/josquin.html,hayden.html](#)
 - More
     - [Multi-Line Strings](#multi-line-strings)
     - [Inline Style a.k.a. JSON-Style](#)
@@ -180,7 +182,7 @@ Use like:
 
 
 
-## Nested List of Key/Value Records
+### Nested List of Key/Value Records
 
 Navigation Menu Example -`nav.yml`:
 
@@ -268,6 +270,53 @@ author: henry
 ```
 
 
+### Multi-File List of Key/Value Records
+
+Note: You can place data files in (sub)folders
+of the `_data` folder.
+Each folder level will get added to a variable's namespace.
+
+
+Org Example #1 - `orgs/jekyll.yml`:
+
+``` yaml
+username: jekyll
+name: Jekyll
+members:
+- name: Parker Moore
+  github: parkr
+- name: Jordon Bedwell
+  github: envygeeks
+```
+
+Org Example #2 - `orgs/octopress.yml`:
+
+``` yaml
+username: octopress
+name: Octopress
+members:
+- name: Brandon Mathis
+  github: imathis
+```
+
+Use like:
+
+``` html
+<ul>
+{% for org_hash in site.data.orgs %}
+{% assign org = org_hash[1] %}
+  <li>
+    <a href="https://github.com/{{ org.username }}">
+      {{ org.name }}
+    </a>
+    ({{ org.members | size }} members)
+  </li>
+{% endfor %}
+</ul>
+```
+
+
+
 ## Front Matter Examples
 
 
@@ -328,6 +377,78 @@ use `page.portfolio` instead of ~~`site.data.portfolio`~~ to reference (e.g. loo
 
 
 
+### Multi-File List of Key/Value Records w/ Collections
+
+
+Albums Example #1 - `_albums/josquin.html`:
+
+``` yaml
+---
+title: "Josquin: Missa De beata virgine and Missa Ave maris stella"
+artist: "The Tallis Scholars"
+director: "Peter Phillips"
+works:
+- title: "Missa De beata virgine"
+  composer: "Josquin des Prez"
+  tracks:
+  - title: "Kyrie"
+    duration: "4:25"
+  - title: "Gloria"
+    duration: "9:53"
+  - title: "Credo"
+    duration: "9:09"
+  - title: "Sanctus & Benedictus"
+    duration: "7:47"
+  - title: "Agnus Dei I, II & III"
+    duration: "6:49"
+---
+```
+
+Albums Example #2 - `_albums/hayden.html`:
+
+``` yaml
+---
+title: "Hayden: ??"
+artist: "??"
+director: "??"
+works:
+- title: "??"
+  composer: "??"
+  tracks:
+  - title: "??"
+    duration: "4:25"
+  - title: "??"
+    duration: "9:53"
+---
+```
+
+Use like:
+
+Example Catalog - `catalog.html`:
+
+``` html
+---
+layout: default
+title:  Album Catalog
+---
+{% for album in site.albums %}
+  <h2>{{ album.title }}</h2>
+  Performed by {{ album.artist }}{% if album.director %}, directed by {{ album.director }}{% endif %}
+  {% for work in album.works %}
+    <h3>{{ work.title }}</h3>
+    <p>Composed by {{ work.composer }}</p>
+    <ul>
+    {% for track in work.tracks %}
+      <li>{{ track.title }} ({{ track.duration }})</li>
+    {% endfor %}
+    </ul>
+  {% endfor %}
+{% endfor %}
+```
+
+Note: Using collections you can access **ALL** front matters from all files
+from anywhere (not just inside a collection page) using the collection name e.g. `site.albums`.
+
 
 ## More
 
@@ -381,7 +502,7 @@ Blank lines denote paragraph breaks\n
 
 ### Inline Style a.k.a. JSON-Style
 
-Note: As an alternative syntax you can use inline style for lists (e.g. JSON arrays)
+Note: As an alternative syntax you can use the inline style for lists (e.g. JSON arrays)
 and hashes/dictionaries (e.g. JSON objects). Example:
 
 ``` yaml
