@@ -97,7 +97,7 @@ is the same as:
 ```
 
 
-**Gotschas**
+**Gotchas**
 
 When to use quotes for your strings?
 
@@ -108,6 +108,8 @@ title: "Text Processing with Ruby: Extract Value from the Data That Surrounds Yo
 title: "Sinatra: Up and Running - Ruby for the Web, Simply"
 title: "Using JRuby: Bringing Ruby to Java"
 ```
+
+Note: You can quote...
 
 <!--
 commans work: e.g.
