@@ -1,9 +1,27 @@
 
+Quickref Series @ Planet Jekyll
+
+[Jekyll](https://github.com/planetjekyll/quickrefs/blob/master/JEKYLL.md) • 
+[Octopress](https://github.com/planetjekyll/quickrefs/blob/master/OCTOPRESS.md)  • 
+[GitHub Pages](https://github.com/planetjekyll/quickrefs/blob/master/GITHUB.md) • 
+[YAML (for Datafiles)](https://github.com/planetjekyll/quickrefs/blob/master/YAML.md) •
+[WordPress](https://github.com/planetjekyll/quickrefs/blob/master/WORDPRESS.md)
 
 
-# YAML (YAML Ain't Markup Language)
+# YAML Quick Reference (Cheat Sheet) for Jekyll Datafiles
 
-_a human friendly data serialization standard for all programming languages_
+_YAML Ain't Markup Language - a human friendly data serialization standard for all programming languages_
+
+
+## Table of Contents
+
+- [List of Key/Value Records](#list-of-keyvalue-records)
+- [Nested List of Key/Value Records](#nested-list-of-keyvalue-records)
+- [Hash (Dictionary) of Key/Value Records](#hash-dictionary-of-keyvalue-records)
+- [Multi-Line Strings](#multi-line-strings)
+- [Literal Keys](#literal-keys)
+- [More Gotschas](#more-gotschas)
+- [References](#references)
 
 
 ## What's human friendly?
@@ -124,11 +142,9 @@ Use like:
   {% if book.edition %}
     ({{ book.edition}})
   {% endif %}
-  by
-  {{ book.author }};
-  {{ book.publisher }},
-  {{ book.date }};
-  {{ book.pages}}
+  by {{ book.author }};
+  {{ book.publisher }}, {{ book.date }}; {{ book.pages}}
+  </div>
 {% endfor %}
 ```
 
@@ -201,7 +217,7 @@ henry:
 
 edward:
   name:    Edward Hyde
-  twitter  edhyde
+  twitter: edhyde
 ```
 
 
@@ -328,6 +344,7 @@ Will become => `null` (no value)
 ## References
 
 **YAML Headquarters**
+
 - YAML (web: [yaml.org](http://yaml.org))
      - [YAML Reference Card](http://yaml.org/refcard.html)
 
