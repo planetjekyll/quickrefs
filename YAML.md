@@ -25,13 +25,21 @@ _YAML Ain't Markup Language - a human friendly data serialization standard for a
 
 ## Table of Contents
 
-- [List of Key/Value Records](#list-of-keyvalue-records)
-- [Nested List of Key/Value Records](#nested-list-of-keyvalue-records)
-- [Hash (Dictionary) of Key/Value Records](#hash-dictionary-of-keyvalue-records)
-- [Multi-Line Strings](#multi-line-strings)
-- [Literal Keys](#literal-keys)
-- [More Gotschas](#more-gotschas)
-- [References](#references)
+- Datafile Examples
+    - [List of Key/Value Records e.g. books.yml](#list-of-keyvalue-records)
+    - [Nested List of Key/Value Records e.g. nav.yml](#nested-list-of-keyvalue-records)
+    - [Hash (Dictionary) of Key/Value Records e.g. people.yml](#hash-dictionary-of-keyvalue-records)
+- Front Matter Examples
+- More
+    - [Multi-Line Strings](#multi-line-strings)
+    - [Inline Style a.k.a. JSON-Style](#)
+    - [Literal Keys](#literal-keys)
+    - [More Gotschas](#more-gotschas)
+        - No Tabs (\t) for Indentation - Use Spaces, Period
+        - Predefined Boolean and No Value Constants - True/False, Yes/No, On/Off, ~/Null
+    - [Tools](#tools)
+    - [References](#references)
+
 
 
 ## What's human friendly?
@@ -130,9 +138,16 @@ title: ""
 -->
 
 
-## List of Key/Value Records
+## Datafile Examples
 
-Book List Example (e.g. `books.yml`):
+List of Key/Value Records  •
+Nested List of Key/Value Records •
+Hash (Dictionary) of Key/Value Records
+
+
+### List of Key/Value Records
+
+Book List Example -`books.yml`:
 
 ``` yaml
 - title:     "Text Processing with Ruby: Extract Value from the Data That Surrounds You"
@@ -184,7 +199,7 @@ Use like:
 
 ## Nested List of Key/Value Records
 
-Navigation Menu Example: e.g. `nav.yml`
+Navigation Menu Example -`nav.yml`:
 
 ``` yaml
 - title: Home
@@ -238,9 +253,9 @@ Use like:
 ```
 
 
-## Hash (Dictionary) of Key/Value Records
+### Hash (Dictionary) of Key/Value Records
 
-Author List Example: e.g. `people.yml`
+Author List Example - `people.yml`:
 
 ``` yaml
 henry:
