@@ -13,7 +13,7 @@ _a human friendly data serialization standard for all programming languages_
 
 Example: `themes.yml`.
 
-~~~
+```yaml
 #########################################
 # Dr. Jekyll's Themes - Add Your Theme!
 
@@ -30,7 +30,7 @@ Example: `themes.yml`.
   author:    Dr. Henry Jekyll et al
   thumbnail: drjekyll-book.png
   license:   Public Domain  
-~~~
+```
 
 is the same as:
 
