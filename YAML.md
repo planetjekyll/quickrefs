@@ -11,7 +11,7 @@ _a human friendly data serialization standard for all programming languages_
 #### Let's you use comments or blank lines
 
 
-Example: `themes.yml`.
+Example: `themes.yml`
 
 ```yaml
 #########################################
@@ -34,7 +34,7 @@ Example: `themes.yml`.
 
 is the same as:
 
-~~~
+```yaml
 - title: Bootstrap
   github: drjekyllthemes/jekyll-bootstrap-theme
   branch: gh-pages
@@ -47,24 +47,24 @@ is the same as:
   author: Dr. Henry Jekyll et al
   thumbnail: drjekyll-book.png
   license: Public Domain
-~~~
+```
 
 
 #### Let's you use strings or keys without (requiring) quotes
 
-~~~
+```yaml
 title:   Bootstrap
 github:  drjekyllthemes/jekyll-bootstrap-theme
 author:  Dr. Henry Jekyll et al
-~~~
+```
 
 is the same as:
 
-~~~
+```yaml
 "title": "Bootstrap"
 "github": "drjekyllthemes/jekyll-bootstrap-theme"
 "author": "Dr. Henry Jekyll et al"
-~~~
+```
 
 
 **Gotschas**
@@ -73,10 +73,10 @@ When to use quotes for your strings?
 
 If you string includes a colon (`:`) you MUST quote your string. Example:
 
-~~~
+```yaml
 title: "Text Processing with Ruby: Extract Value from the Data That Surrounds You"
 title: "Sinatra: Up and Running - Ruby for the Web, Simply"
-~~~
+```
 
 
 
@@ -84,7 +84,7 @@ title: "Sinatra: Up and Running - Ruby for the Web, Simply"
 
 Book List Example (e.g. `books.yml`):
 
-~~~
+```yaml
 - title:     "Text Processing with Ruby: Extract Value from the Data That Surrounds You"
   author:    Rob Miller
   cover:     2015/text-processing-with-ruby.jpg
@@ -110,11 +110,11 @@ Book List Example (e.g. `books.yml`):
   date:      Dec 2011
   pages:     122 pages
   book_url:  http://shop.oreilly.com/product/0636920019664.do
-~~~
+```
 
 Use like:
 
-~~~
+```
 {% for book in site.data.books %}
   <div>
   <a href="{{ book.book_url }}">
@@ -130,7 +130,7 @@ Use like:
   {{ book.date }};
   {{ book.pages}}
 {% endfor %}
-~~~
+```
 
 
 
@@ -138,7 +138,7 @@ Use like:
 
 Navigation Menu Example: e.g. `nav.yml`
 
-~~~
+```yaml
 - title: Home
   href:  /
 
@@ -161,12 +161,12 @@ Navigation Menu Example: e.g. `nav.yml`
 
 - title: About Us
   href:  /about-us/
-~~~
+```
 
 
 Use like:
 
-~~~
+```
 <nav>
   <ul>
     {% for nav in site.data.nav %}
@@ -187,15 +187,14 @@ Use like:
     {% endfor %}
   </ul>
 </nav> 
-~~~
-
+```
 
 
 ## Hash (Dictionary) of Key/Value Records
 
 Author List Example: e.g. `people.yml`
 
-~~~
+```yaml
 henry:
   name:    Dr. Henry Jekyll
   twitter: henryjekyll
@@ -203,14 +202,14 @@ henry:
 edward:
   name:    Edward Hyde
   twitter  edhyde
-~~~
+```
 
 
 Use like:
 
 Example 1) Lookup author info in a post
 
-~~~
+```
 ---
 title:  sample post
 author: henry
@@ -220,7 +219,7 @@ author: henry
 <a href="{{ author.twitter }}">
          {{ author.name }}
 </a>
-~~~~
+```
 
 
 
@@ -228,31 +227,30 @@ author: henry
 
 ### Unfolded (e.g. Keep Newlines) - `|`
 
-~~~
+```yaml
 text: |
    There once was a short man from Ealing
    Who got on a bus to Darjeeling
        It said on the door
        "Please don't spit on the floor"
    So he carefully spat on the ceiling
-~~~
+```
 
 The leading indent (of the first line) and trailing white space gets stripped e.g. becoming:
 
-~~~
+```
 There once was a short man from Ealing\n
 Who got on a bus to Darjeeling\n
     It said on the door\n
     "Please don't spit on the floor"\n
 So he carefully spat on the ceiling\n
-~~~
-
+```
 
 
 
 ### Folded (e.g. Strip Newlines) - `>`
 
-~~~
+```yaml
 text: >
    Wrapped text
    will be folded
@@ -261,17 +259,16 @@ text: >
    
    Blank lines  denote
    paragraph breaks
-~~~
+```
 
 Folded text converts newlines to spaces
 and removes leading whitespaces e.g. becoming:
 
-~~~
+```
 Wrapped text will be folded into a single paragraph\n
 \n
 Blank lines denote paragraph breaks\n
-~~~
-
+```
 
 
 
@@ -281,13 +278,12 @@ Note: You can use upper case letters in your keys (e.g. `Teams`),
 add spaces (e.g. `Bundesliga Teams`) and
 even start with numbers (e.g. `18 Teams`). Example:
 
-~~~
+```yaml
 18 Teams:
   - Austria Wien
   - SC Salzburg
   - Sturm Graz
-~~~
-
+```
 
 
 ## More Gotschas
@@ -296,37 +292,36 @@ even start with numbers (e.g. `18 Teams`). Example:
 
 Boolean true constants:
 
-~~~
+```yaml
 true
 Y
 Yes
 ON
-~~~~
+```
 
-Will become => boolean true
+Will become => boolean `true`
 
 Boolean false constants:
 
-~~~
+```yaml
 FALSE
 n
 No
 off
-~~~
+```
 
-Will become => boolean false
+
+Will become => boolean `false`
 
 
 Null constants:
 
-~~~
+```yaml
 ~
 null
-~~~
+```
 
-Will become => null (no value)
-
-
+Will become => `null` (no value)
 
 
 
