@@ -109,7 +109,10 @@ title: "Sinatra: Up and Running - Ruby for the Web, Simply"
 title: "Using JRuby: Bringing Ruby to Java"
 ```
 
-Note: You can quote...
+Note: You can quote your strings using double quotes (`""`) e.g. "Using JRuby: Bringing Ruby to Java" 
+or single quotes(`''`) e.g. 'Using JRuby: Bringing Ruby to Java'.
+
+
 
 <!--
 commans work: e.g.
@@ -331,43 +334,62 @@ even start with numbers (e.g. `18 Teams`). Example:
 ```
 
 
-## More Gotschas
 
-**Predefined Constants**
+## More Gotchas
 
-Boolean true constants:
+**No Tabs (\t) for Indentation**
 
-``` yaml
-true
-Y
-Yes
-ON
+Note: Use spaces for indentation, period. 
+Make sure noo tabs (`\t`) have somehow ended up in your datafile leading to
+unexpected results.
+
+
+
+**Predefined Constants - True/False, Yes/No, On/Off, ~/Null**
+
+The boolean true constants and false constants e.g.:
+
+```
+true, True, TRUE
+y, Y, yes, YES, YES
+on, ON, ON
+false, False, FALSE
+n, N, no, No, NO
+off, Off, OFF
 ```
 
-Will become => boolean `true`
-
-Boolean false constants:
+will become boolean values e.g. `true` or `false`.  If you want end-up with a string e.g.
 
 ``` yaml
-FALSE
-n
-No
-off
+survey:
+    recommend: Yes      # note: will become => true (boolean)
 ```
 
+make sure you use a quoted version e.g.
 
-Will become => boolean `false`
+``` yaml
+survey:
+    recommend: "Yes"     # note: will become => "Yes" (string)
+```
 
-
-Null constants:
+The same holds for the Null (no value) constants:
 
 ``` yaml
 ~
-null
+null, Null, NULL
 ```
 
-Will become => `null` (no value)
+Will become => `null` (no value). Note: A key without a value will end-up with a null value (and not an empty string, for example). To get an empty string use `""` e.g.
 
+``` yaml
+key1:           # note: value will become => null (no value); same as key1: null  or key1: ~
+key2: ""        # note: value will become => "" (string)
+```
+
+
+## Tools
+
+- *YAML Online Linter* (web: [yamllint.com](http://www.yamllint.com)) - paste in your YAML and click "Go" - the linter will tell you if your datafile is valid or not, and give you a nice clean UTF-8 version
 
 
 ## References
@@ -376,7 +398,6 @@ Will become => `null` (no value)
 
 - YAML (web: [yaml.org](http://yaml.org))
      - [YAML Reference Card](http://yaml.org/refcard.html)
-
 
 **More**
 
