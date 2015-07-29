@@ -20,7 +20,7 @@ _YAML Ain't Markup Language - a human friendly data serialization standard for a
     - [Hash (Dictionary) of Key/Value Records e.g. people.yml](#hash-dictionary-of-keyvalue-records)
     - [Multi-File List of Key/Value Records e.g. orgs/jekyll.yml,octopress.yml](#)
 - Front Matter Examples
-    - [Front Matter w/ List of Key/Value Records e.g. portfolio.html](#)
+    - [List of Key/Value Records e.g. portfolio.html](#)
     - [Multi-File List of Key/Value Records w/ Collections e.g. _albums/josquin.html,hayden.html](#)
 - More
     - [Multi-Line Strings](#multi-line-strings)
@@ -320,11 +320,11 @@ Use like:
 
 ## Front Matter Examples
 
-Front Matter w/ List of Key/Value Records  •
+List of Key/Value Records  •
 Multi-File List of Key/Value Records w/ Collections
 
 
-### Front Matter w/ List of Key/Value Records 
+### List of Key/Value Records 
 
 Portfolio Example, Part 1/2 (Front Matter) - `portfolio.html`:
 
