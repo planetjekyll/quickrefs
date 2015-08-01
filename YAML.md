@@ -33,11 +33,6 @@ _YAML Ain't Markup Language - a human friendly data serialization standard for a
     - [References](#references)
 
 
-Note: You can browse the examples live in action at the Sandbox Example Site @ Planet Jekyll.
-See the [start page](http://planetjekyll.github.io/sandbox)
-or the [sandbox site sources](https://github.com/planetjekyll/sandbox).
-
-
 
 ## What's human friendly?
 
@@ -53,7 +48,7 @@ Example - `themes.yml`:
 - title:     Bootstrap
   github:    drjekyllthemes/jekyll-bootstrap-theme
   branch:    gh-pages
-  author:    Gerald Bauer
+  author:    Edward Hyde
   thumbnail: drjekyll-bootstrap.png
   license:   Public Domain
 
@@ -62,7 +57,7 @@ Example - `themes.yml`:
 - title     : Classics Book     # Todo: Rename to World Classics - Why? Why Not?
   github    : drjekyllthemes/jekyll-book-theme
   branch    : gh-pages
-  author    : Gerald Bauer
+  author    : Edward Hyde
   thumbnail : drjekyll-book.png
   license   : Public Domain  
 ```
@@ -73,13 +68,13 @@ is the same as:
 - title: Bootstrap
   github: drjekyllthemes/jekyll-bootstrap-theme
   branch: gh-pages
-  author: Gerald Bauer
+  author: Edward Hyde
   thumbnail: drjekyll-bootstrap.png
   license: Public Domain
 - title: Classics Book
   github: drjekyllthemes/jekyll-book-theme
   branch: gh-pages
-  author: Gerald Bauer
+  author: Edward Hyde
   thumbnail: drjekyll-book.png
   license: Public Domain
 ```
@@ -99,7 +94,7 @@ e.g. `Jekyll - The #1 Static Site Generator` works as expected.
 ``` yaml
 title:   Bootstrap
 github:  drjekyllthemes/jekyll-bootstrap-theme
-author:  Gerald Bauer
+author:  Edward Hyde
 ```
 
 is the same as:
@@ -107,7 +102,7 @@ is the same as:
 ``` yaml
 "title": "Bootstrap"
 "github": "drjekyllthemes/jekyll-bootstrap-theme"
-"author": "Gerald Bauer"
+"author": "Edward Hyde"
 ```
 
 
@@ -134,6 +129,11 @@ List of Key/Value Records  •
 Nested List of Key/Value Records •
 Hash (Dictionary) of Key/Value Records •
 Multi-File List of Key/Value Records
+
+
+Note: You can browse the examples live in action at the Sandbox Example Site @ Planet Jekyll.
+See the [start page](http://planetjekyll.github.io/sandbox)
+or the [sandbox site sources](https://github.com/planetjekyll/sandbox).
 
 
 ### List of Key/Value Records
@@ -520,11 +520,11 @@ and hashes/dictionaries (e.g. JSON objects). Example:
 ``` yaml
 [{ "title":     "Bootstrap",
    "github":    "drjekyllthemes/jekyll-bootstrap-theme",
-   "author":    "Gerald Bauer",
+   "author":    "Edward Hyde",
    "thumbnail": "drjekyll-bootstrap.png" },
  { "title":     "Classics Book",
    "github":    "drjekyllthemes/jekyll-book-theme",
-   "author":    "Gerald Bauer",
+   "author":    "Edward Hyde",
    "thumbnail": "drjekyll-book.png" }]
 ```
 
@@ -532,8 +532,8 @@ is the same as:
 
 ``` yaml
 [
- { "title": Bootstrap", "github": "drjekyllthemes/jekyll-bootstrap-theme", "author": "Gerald Bauer", "thumbnail": "drjekyll-bootstrap.png" },
- { "title": "Classics Book", "github": "drjekyllthemes/jekyll-book-theme", "author": "Gerald Bauer", "thumbnail": "drjekyll-book.png" }
+ { "title": Bootstrap", "github": "drjekyllthemes/jekyll-bootstrap-theme", "author": "Edward Hyde", "thumbnail": "drjekyll-bootstrap.png" },
+ { "title": "Classics Book", "github": "drjekyllthemes/jekyll-book-theme", "author": "Edward Hyde", "thumbnail": "drjekyll-book.png" }
 ]
 ```
 
@@ -542,11 +542,11 @@ or the same as:
 ``` yaml
 - title     : Bootstrap
   github    : drjekyllthemes/jekyll-bootstrap-theme
-  author    : Gerald Bauer
+  author    : Edward Hyde
   thumbnail : drjekyll-bootstrap.png
 - title     : Classics Book
   github    : drjekyllthemes/jekyll-book-theme
-  author    : Gerald Bauer
+  author    : Edward Hyde
   thumbnail : drjekyll-book.png
 ```
 
