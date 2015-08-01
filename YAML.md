@@ -17,7 +17,7 @@ _YAML Ain't Markup Language - a human friendly data serialization standard for a
 - Data File Examples
     - [List of Key/Value Records e.g. books.yml](#list-of-keyvalue-records)
     - [Nested List of Key/Value Records e.g. nav.yml](#nested-list-of-keyvalue-records)
-    - [Hash (Dictionary) of Key/Value Records e.g. people.yml](#hash-dictionary-of-keyvalue-records)
+    - [Hash (Dictionary) of Key/Value Records e.g. authors.yml](#hash-dictionary-of-keyvalue-records)
     - [Multi-File List of Key/Value Records e.g. orgs/jekyll.yml,octopress.yml](#)
 - Front Matter Examples
     - [List of Key/Value Records e.g. portfolio.html](#)
@@ -33,6 +33,11 @@ _YAML Ain't Markup Language - a human friendly data serialization standard for a
     - [References](#references)
 
 
+Note: You can browse the examples live in action at the Sandbox Example Site @ Planet Jekyll.
+See the [start page](http://planetjekyll.github.io/sandbox)
+or the [sandbox site sources](https://github.com/planetjekyll/sandbox).
+
+
 
 ## What's human friendly?
 
@@ -43,12 +48,12 @@ Example - `themes.yml`:
 
 ``` yaml
 #########################################
-# Dr. Jekyll's Themes - Add Your Theme!
+# Dr Jekyll's Themes - Add Your Theme!
 
 - title:     Bootstrap
   github:    drjekyllthemes/jekyll-bootstrap-theme
   branch:    gh-pages
-  author:    Dr. Henry Jekyll et al
+  author:    Gerald Bauer
   thumbnail: drjekyll-bootstrap.png
   license:   Public Domain
 
@@ -57,7 +62,7 @@ Example - `themes.yml`:
 - title     : Classics Book     # Todo: Rename to World Classics - Why? Why Not?
   github    : drjekyllthemes/jekyll-book-theme
   branch    : gh-pages
-  author    : Dr. Henry Jekyll et al
+  author    : Gerald Bauer
   thumbnail : drjekyll-book.png
   license   : Public Domain  
 ```
@@ -68,19 +73,19 @@ is the same as:
 - title: Bootstrap
   github: drjekyllthemes/jekyll-bootstrap-theme
   branch: gh-pages
-  author: Dr. Henry Jekyll et al
+  author: Gerald Bauer
   thumbnail: drjekyll-bootstrap.png
   license: Public Domain
 - title: Classics Book
   github: drjekyllthemes/jekyll-book-theme
   branch: gh-pages
-  author: Dr. Henry Jekyll et al
+  author: Gerald Bauer
   thumbnail: drjekyll-book.png
   license: Public Domain
 ```
 
 Note: The colon (`:`) key/value separator MUST (only) be followed by a space, thus,
-you can use `author  :  Dr. Henry Jekyll et al` and so on. 
+you can use `title  :  Classics Books` and so on. 
 
 Note: The number sign / hash (`#`) used for inline end-of-line comments MUST
 have both a leading and trailing space e.g. `some text here  # comment starts here`,
@@ -94,7 +99,7 @@ e.g. `Jekyll - The #1 Static Site Generator` works as expected.
 ``` yaml
 title:   Bootstrap
 github:  drjekyllthemes/jekyll-bootstrap-theme
-author:  Dr. Henry Jekyll et al
+author:  Gerald Bauer
 ```
 
 is the same as:
@@ -102,7 +107,7 @@ is the same as:
 ``` yaml
 "title": "Bootstrap"
 "github": "drjekyllthemes/jekyll-bootstrap-theme"
-"author": "Dr. Henry Jekyll et al"
+"author": "Gerald Bauer"
 ```
 
 
@@ -218,22 +223,22 @@ Use like:
 ``` html
 <nav>
   <ul>
-    {% for nav in site.data.nav %}
-      {% if nav.subcategories != null %}
-        <li>
-          <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }} ▼</a>
-          <ul>
-          {% for subcategory in nav.subcategories %}
-            <li><a href="{{ site.url }}{{ subcategory.href }}">{{ subcategory.title }}</a></li>
-          {% endfor %}
-          </ul>
-        </li>
-      {% else %} 
-        <li>
-          <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
+  {% for nav in site.data.nav %}
+    {% if nav.subcategories %}
+      <li>
+        <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }} ▼</a>
+        <ul>
+        {% for subcategory in nav.subcategories %}
+          <li><a href="{{ site.url }}{{ subcategory.href }}">{{ subcategory.title }}</a></li>
+        {% endfor %}
+        </ul>
+      </li>
+    {% else %} 
+      <li>
+        <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
   </ul>
 </nav> 
 ```
@@ -241,11 +246,11 @@ Use like:
 
 ### Hash (Dictionary) of Key/Value Records
 
-Author List Example - `people.yml`:
+Author List Example - `authors.yml`:
 
 ``` yaml
 henry:
-  name:    Dr. Henry Jekyll
+  name:    Dr Henry Jekyll
   twitter: henryjekyll
 
 edward:
@@ -260,13 +265,14 @@ Example 1) Lookup author info in a post
 
 ``` html
 ---
-title:  sample post
+title:  A Strange Case
 author: henry
 ---
 
-{% assign author = site.data.people[ page.author ] %}
-<a href="{{ author.twitter }}">
-         {{ author.name }}
+{% assign author = site.data.authors[ page.author ] %}
+
+<a href="http://twitter.com/{{ author.twitter }}">
+   {{ author.name }}
 </a>
 ```
 
@@ -281,22 +287,24 @@ Each folder level will get added to the variable's namespace e.g. `site.data.org
 Org Example #1 - `orgs/jekyll.yml`:
 
 ``` yaml
-username: jekyll
-name: Jekyll
+name:   Jekyll
+github: jekyll
+
 members:
-- name: Parker Moore
+- name:   Parker Moore
   github: parkr
-- name: Jordon Bedwell
+- name:   Jordon Bedwell
   github: envygeeks
 ```
 
 Org Example #2 - `orgs/octopress.yml`:
 
 ``` yaml
-username: octopress
-name: Octopress
+name:   Octopress
+github: octopress
+
 members:
-- name: Brandon Mathis
+- name:   Brandon Mathis
   github: imathis
 ```
 
@@ -512,11 +520,11 @@ and hashes/dictionaries (e.g. JSON objects). Example:
 ``` yaml
 [{ "title":     "Bootstrap",
    "github":    "drjekyllthemes/jekyll-bootstrap-theme",
-   "author":    "Dr. Henry Jekyll et al",
+   "author":    "Gerald Bauer",
    "thumbnail": "drjekyll-bootstrap.png" },
  { "title":     "Classics Book",
    "github":    "drjekyllthemes/jekyll-book-theme",
-   "author":    "Dr. Henry Jekyll et al",
+   "author":    "Gerald Bauer",
    "thumbnail": "drjekyll-book.png" }]
 ```
 
@@ -524,8 +532,8 @@ is the same as:
 
 ``` yaml
 [
- { "title": Bootstrap", "github": "drjekyllthemes/jekyll-bootstrap-theme", "author": "Dr. Henry Jekyll et al", "thumbnail": "drjekyll-bootstrap.png" },
- { "title": "Classics Book", "github": "drjekyllthemes/jekyll-book-theme", "author": "Dr. Henry Jekyll et al", "thumbnail": "drjekyll-book.png" }
+ { "title": Bootstrap", "github": "drjekyllthemes/jekyll-bootstrap-theme", "author": "Gerald Bauer", "thumbnail": "drjekyll-bootstrap.png" },
+ { "title": "Classics Book", "github": "drjekyllthemes/jekyll-book-theme", "author": "Gerald Bauer", "thumbnail": "drjekyll-book.png" }
 ]
 ```
 
@@ -534,11 +542,11 @@ or the same as:
 ``` yaml
 - title     : Bootstrap
   github    : drjekyllthemes/jekyll-bootstrap-theme
-  author    : Dr. Henry Jekyll et al
+  author    : Gerald Bauer
   thumbnail : drjekyll-bootstrap.png
 - title     : Classics Book
   github    : drjekyllthemes/jekyll-book-theme
-  author    : Dr. Henry Jekyll et al
+  author    : Gerald Bauer
   thumbnail : drjekyll-book.png
 ```
 
