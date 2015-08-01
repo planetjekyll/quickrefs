@@ -588,15 +588,13 @@ off, Off, OFF
 will become boolean values e.g. `true` or `false`.  If you want end-up with a string e.g.:
 
 ``` yaml
-survey:
-    recommend: Yes      # note: will become => true (boolean)
+recommend: Yes       # note: will become => true (boolean)
 ```
 
 make sure you use a quoted version e.g.:
 
 ``` yaml
-survey:
-    recommend: "Yes"     # note: will become => "Yes" (string)
+recommend: "Yes"     # note: will become => "Yes" (string)
 ```
 
 
