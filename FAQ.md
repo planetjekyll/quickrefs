@@ -112,6 +112,34 @@ to
 ## Heading Two
 ```
 
+#### Q: Jekyll doesn't render Markdown when adding HTML tags?
+
+Note: If you put your markdown inside an HTML block tag (e.g. `div`) - the default for Jekyll markdown converter (e.g. kramdown)
+is to pass the text along as is, that is, without any conversion. Example:
+
+```
+<div>
+A List:
+
+- Apples
+- Oranges
+- Blueberries
+</div>
+```
+
+Use the "magic" markdown attribute to turn on markdown conversion inside an HTML block tag e.g.:
+
+```
+<div markdown=`1`>
+A List:
+
+- Apples
+- Oranges
+- Blueberries
+</div>
+```
+
+
 
 ## GitHub Pages
 
