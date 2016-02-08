@@ -19,9 +19,9 @@ or the Twitter page (t: [jekyllrb](https://twitter.com/jekyllrb)).
 
 For detailed upcoming major and minor enhancements and bug fixes, see the [History page](https://github.com/jekyll/jekyll/blob/master/History.markdown) in the Jekyll repo.
 
-For more Jekyll news see the Vienna.html news page (t: [viennahtml](https://twitter.com/viennahtml)).
+For more Jekyll news see the Static Times news channel (t: [statictimes](https://twitter.com/statictimes)).
 
-For more Jekyll goodies see the [Jekyll bookmark category](http://www.thenewdynamic.org/tool/jekyll/) at the (Static is) The New Dynamic site.
+For more Jekyll goodies see the [Awesome Jekyll](https://github.com/planetjekyll/awesome-jekyll) bookmark list or the [Jekyll bookmark category](http://www.thenewdynamic.org/tool/jekyll/) at the (Static is) The New Dynamic site.
 
 
 ## Themes / Templates
@@ -89,12 +89,28 @@ Double check your front matter. Jekyll REQUIRES that your markdown page starts w
 ~~~
 ---
 layout: page
-title:  "The Front Matters"
+title:  The Front Matters
 ---
 ~~~
 
 Note: The front matter MUST start and end with three dashes e.g. `---` (not two `--` or four `----` etc.). As a rule: Without front matter there's no preprocessing, that is, conversion from Markdown (`.md`) to Markup (`.html`).
 
+
+#### Q: Why are my page headings (e.g. `##Heading`) not rendered any longer?
+
+Note: Most markdown converter REQUIRE a space between `##` and `Heading`, thus, change:
+
+```
+#Heading One
+##Heading Two
+```
+
+to
+
+```
+# Heading One
+## Heading Two
+```
 
 
 ## GitHub Pages
