@@ -162,22 +162,22 @@ In Aug/2015 the list includes:
 
 #### Q: How can I post (escape) code snippets that include curly brackets `{{ }}`?
 
-Wrap your code snippets with `{% raw %}` tags. Example:
+Wrap your code snippets with `{% raw %}`..`{% endraw %}` tags. Example:
 
 Before:
 
-~~~
+```liquid
 {% assign words = content | number_of_words %}
 {% if words < 360 %}
    1 min
 {% else %}
    {{ words | divided_by:180 }} mins
 {% endif %}
-~~~
+```
 
 After:  
 
-~~~
+```liquid
 {% raw %}
 {% assign words = content | number_of_words %}
 {% if words < 360 %}
@@ -186,7 +186,7 @@ After:
    {{ words | divided_by:180 }} mins
 {% endif %}
 {% endraw %}
-~~~
+```
 
 Note: Unless escaped (with raw) `{{ }}` and `{% %}` get processed by Jekyll 
 as Liquid template tags/directives/macros.
