@@ -141,9 +141,9 @@ A List:
 
 ## Syntax Highlighting
 
-#### Q: How can I get backtick fenced code blocks e.g. \`\`\` working (with kramdown)?
+#### Q: How can I get backtick fenced code blocks (e.g. \`\`\`) working (with kramdown)?
 
-Use the GitHub-Flavored Markdown (gfm) parser / mode. Change your `_config.yml` settings to:
+Use the GitHub-Flavored Markdown (GFM) parser / mode. Change your `_config.yml` settings to:
 
 ```
 markdown: kramdown
@@ -153,7 +153,43 @@ kramdown:
   hard_wrap: false
 ```
 
-For more see the Official [GitHub-Flavored Markdown (gfm) Docu Page](http://kramdown.gettalong.org/parser/gfm.html).
+For more see the Official [GitHub-Flavored Markdown (GFM) Docu Page](http://kramdown.gettalong.org/parser/gfm.html).
+
+
+#### Q: How can I turn on syntax highlighting in code blocks (with kramdown 'n' rouge)?
+
+Use the `highlighter` and the `kramdown.syntax_highlighter` options. Change your `_config.yml` settings to:
+
+```
+highlighter: rouge
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+```
+
+
+#### Q: How can I turn off syntax highlighting in code blocks (with kramdown 'n' rouge)?
+
+Use the `kramdown.syntax_highlighter_opts.disable` option. Change your `_config.yml` settings to:
+
+```
+highlighter: rouge
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    disable: true
+```
+
+For more see the Official [Rouge Syntax Highlighter Docu Page](http://kramdown.gettalong.org/syntax_highlighter/rouge.html).
 
 
 
