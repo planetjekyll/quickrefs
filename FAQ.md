@@ -139,6 +139,22 @@ A List:
 </div>
 ```
 
+## Syntax Highlighting
+
+#### Q: How can I get backtick fenced code blocks e.g. \`\`\` working (with kramdown)?
+
+Use the GitHub-Flavored Markdown (gfm) parser / mode. Change your `_config.yml` settings to:
+
+```
+markdown: kramdown
+ 
+kramdown:
+  input: GFM
+  hard_wrap: false
+```
+
+For more see the Official [GitHub-Flavored Markdown (gfm) Docu Page](http://kramdown.gettalong.org/parser/gfm.html).
+
 
 
 ## GitHub Pages
