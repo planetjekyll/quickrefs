@@ -165,29 +165,27 @@ Lets use some examples (note the leading spaces get replaced with dots e.g. `·`
 
 _Bulleted List_
 
-```
-*·some text     =>  use 2 spaces indentation e.g.
 
-  ```
-   $ gem install beerdb
-  ```
+    *·some text     =>  use 2 spaces indentation e.g.
+    
+      ```
+      $ gem install beerdb
+      ```
 
-*···some text   =>  use 4 spaces indentation e.g.
+    *···some text   =>  use 4 spaces indentation e.g.
+    
+        ```
+        $ gem install beerdb
+        ```
 
-    ```
-    $ gem install beerdb
-    ```
-```
 
 _Numbered List_
 
-```
-1.·some text    =>  use 3 spaces indentation
-
-   ```
-   $ gem install beerdb
-   ```
-```
+    1.·some text    =>  use 3 spaces indentation
+    
+       ```
+       $ gem install beerdb
+       ```
 
 **==> If you line up the fenced code block with the "natural" list indentation, it will work.**
 
