@@ -161,7 +161,7 @@ For more see the Official [GitHub-Flavored Markdown (GFM) Docu Page](http://kram
 The gist is that the indentation for the code block in lists is determined
 by the column number of the first non-space character after the list item marker. Huh? 
 
-Lets use some examples (note the leading spaces get replaced with dots e.g. `·` to help along):
+Let's use some examples (note the leading spaces get replaced with dots e.g. `·` to help along):
 
 _Bulleted List_
 
@@ -181,7 +181,7 @@ _Bulleted List_
 
 _Numbered List_
 
-    1.·some text    =>  use 3 spaces indentation
+    1.·some text    =>  use 3 spaces indentation e.g.
     
        ```
        $ gem install beerdb
