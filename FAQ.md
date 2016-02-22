@@ -156,6 +156,46 @@ kramdown:
 For more see the Official [GitHub-Flavored Markdown (GFM) Docu Page](http://kramdown.gettalong.org/parser/gfm.html).
 
 
+### Q: How can I get backtick fenced code blocks (e.g. \`\`\`) working inside lists (with kramdown)?
+
+The gist is that the indentation for the code block in lists is determined
+by the column number of the first non-space character after the list item marker. Huh? 
+
+Lets use some examples (note the leading spaces get replaced with dots e.g. `·` to help along):
+
+_Bulleted List_
+
+```
+*·some text     =>  use 2 spaces indentation e.g.
+
+  ```
+   $ gem install beerdb
+  ```
+
+*···some text   =>  use 4 spaces indentation e.g.
+
+    ```
+    $ gem install beerdb
+    ```
+```
+
+_Numbered List_
+
+```
+1.·some text    =>  use 3 spaces indentation
+
+   ```
+   $ gem install beerdb
+   ```
+```
+
+**==> If you line up the fenced code block with the "natural" list indentation, it will work.**
+
+
+For more examples, see the [syntax highlighter sandbox list page](http://planetjekyll.github.io/sandbox-syntax-highlighter/lists.html) - [(source)](https://github.com/planetjekyll/sandbox-syntax-highlighter/blob/gh-pages/lists.md).
+
+
+
 #### Q: How can I turn on syntax highlighting in code blocks (with kramdown 'n' rouge)?
 
 Use the `highlighter` and the `kramdown.syntax_highlighter` options. Change your `_config.yml` settings to:
