@@ -259,7 +259,6 @@ e.g.
 
     ```c
     printf("Hello, World!");
-
     ```
 
 becomes:
@@ -282,7 +281,7 @@ to the file `syntax.css` try:
 $ rougify style monokai.sublime > syntax.css 
 ```
 
-Note: Make sure you include / load the css styles for the syntax highlighter in your HTML template e.g.
+Finally as step three make sure you include / load the css styles for the syntax highlighter in your HTML template e.g.
 
 ``` html
 <link rel="stylesheet" href="css/syntax.css">
