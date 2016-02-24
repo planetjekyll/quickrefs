@@ -141,7 +141,7 @@ A List:
 
 ### Posts and Pages
 
-#### Q: Why are my latest posts not output (when using a loop)?
+#### Q: Why are my latest posts not output (when using a `site.posts` loop)?
 
 Note: By default future posts will not get added to the posts collection. To get future posts added use the
 `future: true` setting in `_config.yml`. For example, lets assume today is 2016-10-12.
