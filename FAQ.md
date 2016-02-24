@@ -139,6 +139,25 @@ A List:
 </div>
 ```
 
+## posts and pages
+
+Q: Why are my latest posts not output (when using a loop)?
+
+Note: By default future posts will not get added to the posts collection. To get future posts added use the
+`future: true` setting in `_config.yml`. For example, lets assume today is 2016-10-12 than
+
+```
+_posts/
+  2016-07-11-new-beerdb-maps.md
+  2016-08-12-new-footballdb-build-system.md
+  2017-01-25-new-season.md
+   
+```  
+
+the posts collection (without `future: true`) will NOT 
+include the `2017-01-25-new-season.md` post.
+
+
 ## Syntax Highlighting
 
 #### Q: How can I get backtick fenced code blocks (e.g. \`\`\`) working (with kramdown)?
