@@ -144,7 +144,7 @@ A List:
 #### Q: Why are my latest posts not output (when using a loop)?
 
 Note: By default future posts will not get added to the posts collection. To get future posts added use the
-`future: true` setting in `_config.yml`. For example, lets assume today is 2016-10-12 than
+`future: true` setting in `_config.yml`. For example, lets assume today is 2016-10-12.
 
 ```
 _posts/
@@ -154,8 +154,8 @@ _posts/
    
 ```  
 
-the posts collection (without `future: true`) will NOT 
-include the `2017-01-25-new-season.md` post.
+Than the posts collection above (without `future: true`) will NOT 
+include the `2017-01-25-new-season.md` post in `site.posts`.
 
 
 ## Syntax Highlighting
