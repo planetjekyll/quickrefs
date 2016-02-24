@@ -292,6 +292,96 @@ Tip: Looking for more themes?  Rouge aims to be a drop-in replacement for pygmen
 thus, you can (re)use all pygments css themes.
 
 
+#### Q: What languages (lexers) are supported by Rouge?
+
+Use:
+
+```
+$ rougify list
+```
+
+to see an up-to-date list. For version 1.3.1 the languages include:
+
+apache •
+applescript •
+c •
+clojure (clj,cljs) •
+coffeescript (coffee,coffee-script) •
+common_lisp (cl,common-lisp,elisp,emacs-lisp) •
+conf (config,configuration) •
+cpp (c++) •
+csharp (c#,cs) •
+css •
+CowScript •
+dart •
+diff (patch,udiff) •
+elixir (elixir,exs) •
+erb (eruby,rhtml) •
+erlang (erl) •
+factor •
+gherkin (cucumber,behat) •
+glsl •
+go (golang) •
+groovy •
+haml (HAML) •
+handlebars (hbs,mustache) •
+haskell (hs) •
+html •
+http •
+ini •
+io •
+java •
+javascript (js) •
+json •
+json-doc •
+liquid •
+literate_coffeescript (litcoffee) •
+literate_haskell (lithaskell,lhaskell,lhs) •
+llvm •
+lua •
+make (makefile,mf,gnumake,bsdmake) •
+markdown (md,mkd) •
+matlab (m) •
+moonscript (moon) •
+nginx •
+nim (nimrod) •
+objective_c (objc) •
+ocaml •
+perl (pl) •
+php (php3,php4,php5) •
+plaintext (text) •
+powershell (posh) •
+praat •
+prolog •
+properties •
+puppet (pp) •
+python (py) •
+qml •
+r (R,s,S) •
+racket •
+ruby (rb) •
+rust (rs) •
+sass •
+scala •
+scheme •
+scss •
+sed •
+shell (bash,zsh,ksh,sh) •
+slim •
+smalltalk (st,squeak) •
+sml (ml) •
+sql •
+swift •
+tcl •
+tex •
+toml •
+tulip (tlp) •
+vb (visualbasic) •
+viml (vim,vimscript,ex) •
+xml •
+yaml (yml)
+
+
 
 ## GitHub Pages
 
