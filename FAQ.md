@@ -249,6 +249,50 @@ kramdown:
 For more see the Official [Rouge Syntax Highlighter Docu Page](http://kramdown.gettalong.org/syntax_highlighter/rouge.html).
 
 
+#### Q: How can I add a CSS syntax highlighter theme for Rouge?
+
+Note: If you have Rouge configured Jekyll will only highlight / markup your code in
+HTML documents using css classes.
+
+e.g.
+
+
+    ```c
+    printf("Hello, World!");
+
+    ```
+
+becomes:
+
+
+``` html
+<div class="highlighter-rouge"><pre class="highlight"><code>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">);</span>
+</code></pre></div>
+
+```
+
+As step two you have to add css styles to your site's css folder. You can use the
+rouge command line tool called `rougify` to get a copy of your theme.
+For example, to save the css styles for the monokai.sublime theme 
+to the file `syntax.css` try:
+
+
+```
+$ rougify style monokai.sublime > syntax.css 
+```
+
+Note: Make sure you include / load the css styles for the syntax highlighter in your HTML template e.g.
+
+``` html
+<link rel="stylesheet" href="css/syntax.css">
+```
+That's it.
+
+Tip: Looking for more themes?  Rouge aims to be a drop-in replacement for pygments (e.g. uses the same css style classes), 
+thus, you can (re)use all pygments css themes.
+
+
 
 ## GitHub Pages
 
