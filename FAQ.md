@@ -47,12 +47,14 @@ To get started see the `jekyll-bootstrap-theme` (github: [drjekyllthemes/jekyll-
 
 #### Q: How can I get started with gem-packaged themes?
 
+or
+
 #### Q: Do I need to package my theme into a gem?
 
 Gem-packaged themes are just an advanced option and in addition they are in development 
 for (real world) experiments (e.g. think v0.1 as stated by the Ben Balter - the lead designer / manager / dev at GitHub).
 
-Thus, to conclude do NOT read to much into the official themes docs e.g. as the only or "right" way to design a theme. 
+Thus, to conclude do NOT read too much into the official themes docs e.g. as the only or "right" way to design a theme. 
 Just (continue to) use "classic" themes - there are hundreds to learn from and once you have masterd "classic" themes 
 you can "graduate" to the master class, that is, using gem-packaged themes.
 
