@@ -42,7 +42,7 @@ Yes, of course. You can use any HTML starter template/boilerplate with Jekyll.
 Jekyll (and GitHub Pages) has built-in support for SCSS, thus, if you use the Bootstrap SCSS version - Jekyll
 will auto-build the `bootstrap.css` from the sources letting you change colors,  fonts and much more
 in `_settings.scss`.
-To get started see the `jekyll-bootstrap-theme` (github: [drjekyllthemes/jekyll-bootstrap-theme](https://github.com/drjekyllthemes/jekyll-bootstrap-theme)) - a ready-to-fork starter theme - as a (live) example.
+To get started see the `jekyll-bootstrap-theme` (github: [henrythemes/jekyll-bootstrap-theme](https://github.com/henrythemes/jekyll-bootstrap-theme)) - a ready-to-fork starter theme - as a (live) example.
 
 
 #### Q: How can I get started with gem-packaged themes?
