@@ -60,7 +60,7 @@ you can "graduate" to the master class, that is, using gem-packaged themes.
 
 Again gem-packaged themes are wonderful and welcome -- remember, however, the party is just getting started. 
 
-For some "classic" starter themes may I hightlight the Henry's themes:
+For some "classic" starter themes you may try some of Henry's themes:
 
 - [/jekyll-starter-theme](https://github.com/henrythemes/jekyll-starter-theme)
 - [/jekyll-starter-theme-v2](https://github.com/henrythemes/jekyll-starter-theme-v2)
@@ -70,6 +70,10 @@ For some "classic" starter themes may I hightlight the Henry's themes:
 For the "state-of-art" what a "classic" theme can do - see the incredible beautiful and 
 extremely well-documented (incl. a getting started guide and much much more) [Minimal Mikstake (MM) theme](https://github.com/mmistakes/minimal-mistakes) by Michael Rose. Happy Jekylling.
 
+
+#### Q: Where can I find gem-packaged themes?
+
+See the [Awesome (Gem-Packaged) Jekyll themes page](https://github.com/planetjekyll/awesome-jekyll-themes) 
 
 
 ## Getting Help 
