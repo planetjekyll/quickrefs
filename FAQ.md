@@ -45,6 +45,30 @@ in `_settings.scss`.
 To get started see the `jekyll-bootstrap-theme` (github: [drjekyllthemes/jekyll-bootstrap-theme](https://github.com/drjekyllthemes/jekyll-bootstrap-theme)) - a ready-to-fork starter theme - as a (live) example.
 
 
+#### Q: How can I get started with gem-packaged themes?
+
+#### Q: Do I need to package my theme into a gem?
+
+Gem-packaged themes are just an advanced option and in addition they are in development 
+for (real world) experiments (e.g. think v0.1 as stated by the Ben Balter - the lead designer / manager / dev at GitHub).
+
+Thus, to conclude do NOT read to much into the official themes docs e.g. as the only or "right" way to design a theme. 
+Just (continue to) use "classic" themes - there are hundreds to learn from and once you have masterd "classic" themes 
+you can "graduate" to the master class, that is, using gem-packaged themes.
+
+Again gem-packaged themes are wonderful and welcome -- remember, however, the party is just getting started. 
+
+For some "classic" starter themes may I hightlight the Henry's themes:
+
+- [/jekyll-starter-theme](https://github.com/henrythemes/jekyll-starter-theme)
+- [/jekyll-starter-theme-v2](https://github.com/henrythemes/jekyll-starter-theme-v2)
+- [/jekyll-minimal-theme](https://github.com/henrythemes/jekyll-minimal-theme)
+- [/jekyll-bootstrap-theme](https://github.com/henrythemes/jekyll-bootstrap-theme)
+
+For the "state-of-art" what a "classic" theme can do - see the incredible beautiful and 
+extremely well-documented (incl. a getting started guide and much much more) [Minimal Mikstake (MM) theme](https://github.com/mmistakes/minimal-mistakes) by Michael Rose. Happy Jekylling.
+
+
 
 ## Getting Help 
 
