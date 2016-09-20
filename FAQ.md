@@ -56,15 +56,15 @@ you can "graduate" to the master class, that is, using gem-packaged themes.
 
 Again gem-packaged themes are wonderful and welcome -- remember, however, the party is just getting started:
 
-- [/hello-minima-theme](https://github.com/henrythemes/hello-minima-theme)
+- [henrythemes/hello-minima-theme](https://github.com/henrythemes/hello-minima-theme)
 
 For some "classic" starter themes you may try some of Henry's themes:
 
-- [/hello-jekyll-theme](https://github.com/henrythemes/hello-jekyll-theme)
-- [/jekyll-starter-theme](https://github.com/henrythemes/jekyll-starter-theme)
-- [/jekyll-starter-theme-v2](https://github.com/henrythemes/jekyll-starter-theme-v2)
-- [/jekyll-minimal-theme](https://github.com/henrythemes/jekyll-minimal-theme)
-- [/jekyll-bootstrap-theme](https://github.com/henrythemes/jekyll-bootstrap-theme)
+- [henrythemes/hello-jekyll-theme](https://github.com/henrythemes/hello-jekyll-theme)
+- [henrythemes/jekyll-starter-theme](https://github.com/henrythemes/jekyll-starter-theme)
+- [henrythemes/jekyll-starter-theme-v2](https://github.com/henrythemes/jekyll-starter-theme-v2)
+- [henrythemes/jekyll-minimal-theme](https://github.com/henrythemes/jekyll-minimal-theme)
+- [henrythemes/jekyll-bootstrap-theme](https://github.com/henrythemes/jekyll-bootstrap-theme)
 
 For the "state-of-art" what a "classic" theme can do - see the incredible beautiful and 
 extremely well-documented (incl. a getting started guide and much much more) [Minimal Mikstake (MM) theme](https://github.com/mmistakes/minimal-mistakes) by Michael Rose. Happy Jekylling.
