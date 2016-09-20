@@ -45,11 +45,7 @@ in `_settings.scss`.
 To get started see the `jekyll-bootstrap-theme` (github: [henrythemes/jekyll-bootstrap-theme](https://github.com/henrythemes/jekyll-bootstrap-theme)) - a ready-to-fork starter theme - as a (live) example.
 
 
-#### Q: How can I get started with gem-packaged themes?
-
-or
-
-#### Q: Do I need to package my theme into a gem?
+#### Q: How can I get started with gem-packaged themes? / Do I need to package my theme into a gem?
 
 Gem-packaged themes are just an advanced option and in addition they are in development 
 for (real world) experiments (e.g. think v0.1 as stated by the Ben Balter - the lead designer / manager / dev at GitHub).
