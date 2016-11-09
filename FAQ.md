@@ -189,7 +189,7 @@ include the `2017-01-25-new-season.md` post in `site.posts`.
 You can include markdown blocks from files in your markdown pages with `include` (looks in the `_includes` folder) or
 `include_relative` (looks in the current folder of your page). 
 
-Example: `article.md
+Example `article.md`:
 
 ```
 ---
@@ -214,7 +214,7 @@ If your page is a HTML page e.g. `about.html`
 you have to capture the included markdown block  
 and than convert the markdown block with the `markdownify` filter. 
 
-Example: `about.html`
+Example `about.html`:
 
 ```
 {% capture intro %}{% include intro.md %}{% endcapture %}
