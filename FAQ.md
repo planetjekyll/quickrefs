@@ -99,10 +99,7 @@ In Europe groups include:
 
 In America groups include:
 
-- @ San Francisco, California -  **San Franciso Static Web Tech - SF SWT** (web: [staticwebtech.com](http://www.staticwebtech.com), meetup: [sf-static-web-tech](http://meetup.com/sf-static-web-tech/), t: [staticwebtech](https://twitter.com/staticwebtech))
 - @ New York, New York - **The New Dynamic** (meetup: [The-New-Dynamic](http://meetup.com/The-New-Dynamic/))
-- @ Austin, Texas - **Peanut Butter and Jekyll** (meetup: [PB-and-Jekyll](http://meetup.com/PB-and-Jekyll/))
-- @ Denver, Colorado - **Denver Jekyll** (meetup: [denver-jekyll](http://meetup.com/denver-jekyll/))
 
 If there's no Jekyll group yet in your city, why not start one! 
 If not, try a local Ruby user group (be aware you might run into some Middleman fanatics ;-),
@@ -115,12 +112,12 @@ see the [Awesome Events Page @ Planet Ruby](https://github.com/planetruby/awesom
 
 Double check your front matter. Jekyll REQUIRES that your markdown page starts with a front matter section e.g.:
 
-~~~
+```
 ---
 layout: page
 title:  The Front Matters
 ---
-~~~
+```
 
 Note: The front matter MUST start and end with three dashes e.g. `---` (not two `--` or four `----` etc.). As a rule: Without front matter there's no preprocessing, that is, conversion from Markdown (`.md`) to Markup (`.html`).
 
@@ -185,6 +182,44 @@ _posts/
 
 Than the posts collection above (without `future: true`) will NOT 
 include the `2017-01-25-new-season.md` post in `site.posts`.
+
+
+#### Q: How can I include markdown blocks in markdown pages?
+
+You can include markdown blocks from files in your markdown pages with `include` (looks in the `_includes` folder) or
+`include_relative` (looks in the current folder of your page). 
+
+Example: `article.md
+
+```
+---
+title:  Title 
+layout: default
+---
+
+{% include_relative intro.md %}
+{% include_relative explanation.md %}
+{% include_relative conclusion.md %}
+
+```
+
+Note: With `include_relative` you can only include files from 
+the current folder and its subfolders but NOT up the hierachy in parent folders e.g. `..\` 
+due to the security sandbox.
+
+
+#### Q: How can I include markdown blocks in html pages?
+
+If your page is a HTML page e.g. `about.html` 
+you have to capture the included markdown block  
+and than convert the markdown block with the `markdownify` filter. 
+
+Example: `about.html`
+
+```
+{% capture intro %}{% include intro.md %}{% endcapture %}
+{{ intro | markdownify }}
+```
 
 
 ## Syntax Highlighting
