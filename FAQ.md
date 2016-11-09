@@ -418,15 +418,20 @@ yaml (yml)
 
 See the [GitHub Pages Dependency Versions](https://pages.github.com/versions/) page 
 listing all installed (white-listed) Jekyll Plugins.
-In Aug/2015 the list includes:
+In Nov/2016 the list includes:
 
-- `jekyll-coffeescript` (github: [jekyll/jekyll-coffeescript](https://github.com/jekyll/jekyll-coffeescript)) - a CoffeeScript converter for Jekyll
-- `jekyll-sass-converter` (github: [jekyll/jekyll-sass-converter](https://github.com/jekyll/jekyll-sass-converter)) - a basic Sass converter for Jekyll
-- `jekyll-mentions` (github: [jekyll/jekyll-mentions](https://github.com/jekyll/jekyll-mentions)) - @mention support for your Jekyll site
-- `jekyll-redirect-from` (github: [jekyll/jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)) - seamlessly specify multiple redirection URLs for your pages and posts
-- `jekyll-sitemap` (github: [jekyll/jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)) - automatically generate a sitemap.xml for your Jekyll site
-- `jekyll-feed` (github: [jekyll/jekyll-feed](https://github.com/jekyll/jekyll-feed)) - a Jekyll plugin to generate an Atom feed of your Jekyll posts
-- `jemoji`  (github: [jekyll/jemoji](https://github.com/jekyll/jemoji)) - GitHub-flavored emoji plugin for Jekyll
+- **Coffeescript** (github: [jekyll/jekyll-coffeescript](https://github.com/jekyll/jekyll-coffeescript)) - a CoffeeScript converter
+- **Sass Converter** (github: [jekyll/jekyll-sass-converter](https://github.com/jekyll/jekyll-sass-converter)) - a basic Sass converter
+- **Mentions** (github: [jekyll/jekyll-mentions](https://github.com/jekyll/jekyll-mentions)) - @mention support for your site
+- **Redirect From** (github: [jekyll/jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)) - seamlessly specify multiple redirection URLs for your pages and posts
+- **Sitemap** (github: [jekyll/jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)) - automatically generate a sitemap.xml for your site
+- **Feed** (github: [jekyll/jekyll-feed](https://github.com/jekyll/jekyll-feed)) - generate an Atom feed of your posts
+- **Avatar** (github: [benbalter/jekyll-avatar](https://github.com/benbalter/jekyll-avatar)) - rendering GitHub avatars
+- **Gist** (github: [jekyll/jekyll-gist](https://github.com/jekyll/jekyll-gist)) - liquid tag for displaying GitHub Gists
+- **Github Metadata** (github: [jekyll/github-metadata](https://github.com/jekyll/github-metadata)) - access site.github metadata
+- **Paginate** (github: [jekyll/jekyll-paginate](https://github.com/jekyll/jekyll-paginate)) - default pagination generator
+- **SEO Tag** (github: [](https://github.com/jekyll/jekyll-seo-tag)) - adds metadata tags for search engines and social networks to better index and display your site's content
+- **Emoji** (github: [jekyll/jemoji](https://github.com/jekyll/jemoji)) - adds GitHub-flavored emojis
 
 
 ## Liquid Templates
