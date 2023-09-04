@@ -637,6 +637,7 @@ key2: ""        # note: value will become => "" (string)
 **More**
 
 - [YAML @ Wikipedia](https://en.wikipedia.org/wiki/YAML)
+- [YAML Tutorial @ Spacelift](https://spacelift.io/blog/yaml)
 
 
 
